@@ -1,5 +1,5 @@
 #include <iostream>
-#include "src/lib/Greeting.h"
+#include "src/lib/Greeting/Greeting.h"
 
 int main(int argc, char** argv){
     Greeting *greet = new Greeting();

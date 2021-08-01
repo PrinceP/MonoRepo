@@ -1,8 +1,8 @@
 cc_test(
-    name = "tests",
+    name = "test_LinearSearch",
     srcs = glob(["**/*.cc"]),
     deps = [
-        "//src/lib:GreetingLib",
+        "//src/lib/LinearSearch:LinearSearchLib",
         "@com_google_googletest//:gtest_main",
     ],
 )
