@@ -13,6 +13,19 @@
 
 ## Commands to help
 
+- Generate a sample project work (BinarySearch) with test and main
+
+```bash
+sh generate_sample.sh BinarySearch
+```
+
+To clean the above mistake...
+```bash
+sh cleas_sample.sh BinarySearch
+```
+
+
+
 - Building and testing a specific program
 
 ```bash
