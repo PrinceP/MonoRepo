@@ -7,7 +7,7 @@
 | ------ | ------ | ------ |------ | ------ |
 | Greeting | C++ | Greeting |test_Greeting||
 | Linear Search | C++ | LinearSearch |test_LinearSearch|Basic|
-| Binary Search | C++ | BinarySearch |test_BinarySearch|Basic|
+| Binary Search | C++ | BinarySearch |test_BinarySearch|Basic,Optimized,PS1,PS2,PS3 Src:https://www.geeksforgeeks.org/the-ubiquitous-binary-search-set-1/|
 
 
 

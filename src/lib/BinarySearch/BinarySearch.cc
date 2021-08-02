@@ -15,6 +15,29 @@ std::string BinarySearch::getBinarySearchMessage(int inputArray[], int size_of_a
 			start = mid+1;
 		}
 	}
-	
 	return "-1";
+}
+
+std::string BinarySearch::getBinarySearchOptimize(int inputArray[], int size_of_array, int key){
+
+	int start = 0;
+	int end = size_of_array - 1;
+	
+	while(end - start > 1){
+		int mid = start + (end - start)/2;
+		if(inputArray[mid]>=key){
+			end = mid;
+		}else{
+			start = mid;
+		}
+	}
+
+	if(inputArray[start] == key){
+		return std::to_string(start);
+	}else if(inputArray[end] == key){
+		return std::to_string(end);
+	}
+	else{
+		return "-1";
+	}
 }

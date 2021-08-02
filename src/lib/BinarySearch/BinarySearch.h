@@ -6,6 +6,8 @@
 class BinarySearch {
     public:
         std::string getBinarySearchMessage(int inputArray[], int size_of_array, int key);
+        std::string getBinarySearchOptimize(int inputArray[], int size_of_array, int key);
+        
 };
 
 #endif
