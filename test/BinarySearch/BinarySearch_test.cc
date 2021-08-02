@@ -7,9 +7,13 @@ TEST(BinarySearchShould, ReturnHelloWorld){
     int size_of_arr = sizeof(sample_arr)/sizeof(int);
     std::string actual1 = bs->getBinarySearchMessage(sample_arr, size_of_arr, 7);
     std::string actual2 = bs->getBinarySearchOptimize(sample_arr, size_of_arr, 7);
+	std::string actual3 = bs->getBinarySearchInfiniteArray(sample_arr,7);
 	std::string expected = "6";
+	
 	EXPECT_EQ(expected, actual1);
 	EXPECT_EQ(expected, actual2);
+	EXPECT_EQ(expected, actual3);
+	
 	
 	int sample_arr2[] = {6,7,8,9,1,2,3,4,5};
     int size_of_arr2 = sizeof(sample_arr2)/sizeof(int);

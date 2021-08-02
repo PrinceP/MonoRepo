@@ -7,7 +7,7 @@
 | ------ | ------ | ------ |------ | ------ |
 | Greeting | C++ | Greeting |test_Greeting||
 | Linear Search | C++ | LinearSearch |test_LinearSearch|Basic|
-| Binary Search | C++ | BinarySearch |test_BinarySearch|Basic,Optimized, MinOfRotatedArray Src:https://www.geeksforgeeks.org/the-ubiquitous-binary-search-set-1/|
+| Binary Search | C++ | BinarySearch |test_BinarySearch|Basic,Optimized, MinOfRotatedArray, InfiniteArray Src:https://www.geeksforgeeks.org/the-ubiquitous-binary-search-set-1/, https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/|
 
 
 

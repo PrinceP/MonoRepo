@@ -63,3 +63,34 @@ std::string BinarySearch::getBinarySearchIndexOfMinimumRotatedArray(int inputArr
 	return "-1";
 
 }
+
+std::string BinarySearch::getBinarySearchInfiniteArray(int inputArray[], int key){
+
+	int start = 0;
+	int end = 1;
+	int val = inputArray[start];
+	while(val < key){
+		start = end;
+		end = 2 * end;
+		val = inputArray[end];
+	}
+
+	while(end - start > 1){
+		int mid = start + (end - start)/2;
+		if(inputArray[mid]>=key){
+			end = mid;
+		}else{
+			start = mid;
+		}
+	}
+
+	if(inputArray[start] == key){
+		return std::to_string(start);
+	}else if(inputArray[end] == key){
+		return std::to_string(end);
+	}
+	else{
+		return "-1";
+	}
+	
+}
