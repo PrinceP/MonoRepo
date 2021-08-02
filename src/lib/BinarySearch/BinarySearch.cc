@@ -41,3 +41,25 @@ std::string BinarySearch::getBinarySearchOptimize(int inputArray[], int size_of_
 		return "-1";
 	}
 }
+
+std::string BinarySearch::getBinarySearchIndexOfMinimumRotatedArray(int inputArray[], int size_of_array){
+	int start = 0;
+	int end = size_of_array - 1;
+	
+	while(start <= end){
+		
+		if(start == end){
+			return std::to_string(start);
+		}
+
+		int mid = start + (end - start)/2;
+
+		if(inputArray[mid] < inputArray[end]){
+			end = mid;
+		}else{
+			start = mid + 1;
+		}
+	}
+	return "-1";
+
+}

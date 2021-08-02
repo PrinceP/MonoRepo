@@ -11,4 +11,10 @@ TEST(BinarySearchShould, ReturnHelloWorld){
 	EXPECT_EQ(expected, actual1);
 	EXPECT_EQ(expected, actual2);
 	
+	int sample_arr2[] = {6,7,8,9,1,2,3,4,5};
+    int size_of_arr2 = sizeof(sample_arr2)/sizeof(int);
+    actual1 = bs->getBinarySearchIndexOfMinimumRotatedArray(sample_arr2, size_of_arr2);
+    expected = "4";
+	EXPECT_EQ(expected, actual1);
+
 }
