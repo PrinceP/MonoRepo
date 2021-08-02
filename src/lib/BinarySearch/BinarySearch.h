@@ -5,7 +5,7 @@
 
 class BinarySearch {
     public:
-        std::string getBinarySearchMessage();
+        std::string getBinarySearchMessage(int inputArray[], int size_of_array, int key);
 };
 
 #endif

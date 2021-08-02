@@ -3,11 +3,11 @@
 # Bazel workflow
 
 
-| Programs |Language|Bazel build|Bazel test|
-| ------ | ------ | ------ |------ |
-| Greeting | C++ | Greeting |test_Greeting|
-| Linear Search | C++ | LinearSearch |test_LinearSearch|
-| Binary Search | C++ |  |
+| Programs |Language|Bazel build|Bazel test|Remarks|
+| ------ | ------ | ------ |------ | ------ |
+| Greeting | C++ | Greeting |test_Greeting||
+| Linear Search | C++ | LinearSearch |test_LinearSearch|Basic|
+| Binary Search | C++ | BinarySearch |test_BinarySearch|Basic|
 
 
 
@@ -21,7 +21,7 @@ sh generate_sample.sh BinarySearch
 
 To clean the above mistake...
 ```bash
-sh cleas_sample.sh BinarySearch
+sh clean_sample.sh BinarySearch
 ```
 
 

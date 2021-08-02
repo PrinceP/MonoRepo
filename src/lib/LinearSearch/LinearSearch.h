@@ -5,7 +5,7 @@
 
 class LinearSearch {
     public:
-        std::string getSearch();
+        std::string getSearch(int inputArray[], int size_of_array, int key);
 };
 
 #endif
