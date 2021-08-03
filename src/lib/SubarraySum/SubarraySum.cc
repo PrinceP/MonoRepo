@@ -60,11 +60,10 @@ std::string SubarraySum::getSubarraySumFindMessage(int inputArray[], int size_of
 	int cur_subarray_sum = inputArray[0];
 	int start = 0;
 
-	for(int i = 1; i <= size_of_array; i++)
-	{
+	for(int i = 1; i <= size_of_array; i++){
 
-		while(cur_subarray_sum > key && start < size_of_array - 1)
-		{	
+		while(cur_subarray_sum > key && start < size_of_array - 1){
+
 			cur_subarray_sum = cur_subarray_sum - inputArray[start];
 			start += 1;
 		}
@@ -76,5 +75,30 @@ std::string SubarraySum::getSubarraySumFindMessage(int inputArray[], int size_of
 		cur_subarray_sum += inputArray[i];
 
 	}
+	return std::to_string(0);
+}
+
+std::string SubarraySum::getSubarraySumFindNegativeMessage(int inputArray[], int size_of_array, int key){
+
+	std::unordered_map<int, int> map;
+
+	int cur_subarray_sum = 0;
+	for(int i=0; i<size_of_array;i++){
+
+		cur_subarray_sum += inputArray[i];
+
+		if(cur_subarray_sum == key){
+			return std::to_string(0)+"-"+std::to_string(i);
+		}
+
+		if(map.find(cur_subarray_sum - key) != map.end())
+		{
+			return std::to_string(map[cur_subarray_sum-key]+1)+"-"+std::to_string(i);
+		}
+
+		map[cur_subarray_sum] = i;		
+
+	}
+
 	return std::to_string(0);
 }
