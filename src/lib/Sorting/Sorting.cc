@@ -40,3 +40,21 @@ std::vector<int> Sorting::getInsertionSortingMessage(std::vector<int> input_Vec)
 	return input_Vec;
 }
 
+
+std::vector<int> Sorting::getSelectionSortingMessage(std::vector<int> input_Vec){
+	int n = input_Vec.size();
+	
+	for(int i = 0; i <= n - 2 ; i++){
+		
+		int min_position = i;
+
+		for(int j = i; j<n; j++){
+			if(input_Vec[j] < input_Vec[min_position]){
+				min_position = j;
+			}
+		}
+		std::swap(input_Vec[min_position], input_Vec[i]);
+
+	}
+	return input_Vec;
+}
