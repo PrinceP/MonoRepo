@@ -43,6 +43,17 @@ std::string SubarraySum::getSubarraySumKandaneMessage(int inputArray[], int size
 	int max_subarray_sum = 0;
 	int subarray_sum = 0;
 
+	//Improvement over all negative values
+	int max_element = inputArray[0];
+    
+    for(int i=1; i<size_of_array;i++){
+        max_element = std::max(max_element, inputArray[i]);
+    }
+    
+    if(max_element < 0){
+        return std::to_string(max_element);
+    }
+
 	for(int i = 0; i < size_of_array; i++){
 
 		subarray_sum += inputArray[i];
