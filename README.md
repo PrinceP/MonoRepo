@@ -9,7 +9,7 @@
 | Linear Search | C++ | LinearSearch |test_LinearSearch|Basic|
 | Binary Search | C++ | BinarySearch |test_BinarySearch|Basic,Optimized, MinOfRotatedArray, InfiniteArray Src:https://www.geeksforgeeks.org/the-ubiquitous-binary-search-set-1/, https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/, https://www.geeksforgeeks.org/given-sorted-array-number-x-find-pair-array-whose-sum-closest-x/|
 | Subarray Sum | C++ | SubarraySum |test_SubarraySum|Basic,Prefix,Kandane,https://www.geeksforgeeks.org/find-subarray-with-given-sum/|
-
+| Rotation 1 Dimensional | C++ | Rotation1D |test_Rotation1D|Basic-https://www.geeksforgeeks.org/print-array-after-it-is-right-rotated-k-times/|
 
 
 ## Commands to help
