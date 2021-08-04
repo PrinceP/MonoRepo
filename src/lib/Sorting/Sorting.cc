@@ -21,3 +21,22 @@ std::vector<int> Sorting::getBubbleSortingMessage(std::vector<int> input_Vec){
 
 	return input_Vec;
 }
+
+std::vector<int> Sorting::getInsertionSortingMessage(std::vector<int> input_Vec){
+	int n = input_Vec.size();
+    
+	for(int i = 1; i <= n - 1; i++){
+
+		int current = input_Vec[i];
+		int prev = i - 1;
+
+		while(prev >= 0 && current < input_Vec[prev]){
+			input_Vec[prev + 1] = input_Vec[prev];
+			prev = prev - 1;
+		}
+
+		input_Vec[prev + 1] = current;
+	}
+	return input_Vec;
+}
+

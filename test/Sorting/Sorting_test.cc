@@ -4,12 +4,21 @@
 TEST(SortingShould, ReturnHelloWorld){
 	Sorting *out = new Sorting();
 	std::vector<int> sample_arr = {9, 7, 5, 3, 1};
-    std::vector<int> actual = out->getBubbleSortingMessage(sample_arr);
+    std::vector<int> actual1 = out->getBubbleSortingMessage(sample_arr);
+	std::vector<int> actual2 = out->getInsertionSortingMessage(sample_arr);
+	
+
 	std::vector<int> expected = {1, 3, 5, 7, 9};
 
-	ASSERT_EQ(actual.size(), expected.size()) << "Vectors expected and actual are of unequal length";
+	ASSERT_EQ(actual1.size(), expected.size()) << "Vectors expected and actual are of unequal length";
 
 	for (int i = 0; i < expected.size(); ++i) {
-		EXPECT_EQ(actual[i], expected[i]) << "Vectors expected and actual differ at index " << i;
+		EXPECT_EQ(actual1[i], expected[i]) << "Vectors expected and actual differ at index " << i;
+	}
+
+	ASSERT_EQ(actual2.size(), expected.size()) << "Vectors expected and actual are of unequal length";
+
+	for (int i = 0; i < expected.size(); ++i) {
+		EXPECT_EQ(actual2[i], expected[i]) << "Vectors expected and actual differ at index " << i;
 	}
 }
