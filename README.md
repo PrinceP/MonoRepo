@@ -7,7 +7,7 @@
 | ------ | ------ | ------ |------ | ------ |
 | Greeting | C++ | Greeting |test_Greeting||
 | Linear Search | C++ | LinearSearch |test_LinearSearch|Basic|
-| Binary Search | C++ | BinarySearch |test_BinarySearch|Basic,Optimized, MinOfRotatedArray, InfiniteArray Src:https://www.geeksforgeeks.org/the-ubiquitous-binary-search-set-1/, https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/|
+| Binary Search | C++ | BinarySearch |test_BinarySearch|Basic,Optimized, MinOfRotatedArray, InfiniteArray Src:https://www.geeksforgeeks.org/the-ubiquitous-binary-search-set-1/, https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/, https://www.geeksforgeeks.org/given-sorted-array-number-x-find-pair-array-whose-sum-closest-x/|
 | Subarray Sum | C++ | SubarraySum |test_SubarraySum|Basic,Prefix,Kandane,https://www.geeksforgeeks.org/find-subarray-with-given-sum/|
 
 

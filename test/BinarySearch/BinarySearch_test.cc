@@ -21,4 +21,12 @@ TEST(BinarySearchShould, ReturnHelloWorld){
     expected = "4";
 	EXPECT_EQ(expected, actual1);
 
+	int sample_arr3[] = {10,22,28,29,30,40};
+    int size_of_arr3 = sizeof(sample_arr3)/sizeof(int);
+    actual1 = bs->getClosestPair(sample_arr3, size_of_arr3, 54);
+    expected = "22+30";
+	EXPECT_EQ(expected, actual1);
+
+	
+
 }

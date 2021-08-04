@@ -94,3 +94,29 @@ std::string BinarySearch::getBinarySearchInfiniteArray(int inputArray[], int key
 	}
 	
 }
+
+std::string BinarySearch::getClosestPair(int inputArray[], int size_of_array, int key){
+
+	int res_start, res_end;
+    int min_diff = INT_MAX;
+    int start = 0, end = size_of_array - 1;
+    
+    while(start < end){
+        
+        if(abs(inputArray[start] + inputArray[end] - key) < min_diff){
+            min_diff = abs(inputArray[start] + inputArray[end] - key);
+            res_start = inputArray[start];
+            res_end = inputArray[end];
+        }
+        if((inputArray[start] + inputArray[end]) < key){
+            start += 1;
+        }
+        else{
+            end -= 1;
+        }
+    
+    }
+    
+    return std::to_string(res_start) + "+" + std::to_string(res_end);
+
+}

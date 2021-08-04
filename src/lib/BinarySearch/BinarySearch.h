@@ -9,6 +9,7 @@ class BinarySearch {
         std::string getBinarySearchOptimize(int inputArray[], int size_of_array, int key);
         std::string getBinarySearchIndexOfMinimumRotatedArray(int inputArray[], int size_of_array);
         std::string getBinarySearchInfiniteArray(int inputArray[], int key);
+        std::string getClosestPair(int inputArray[], int size_of_array, int key);
         
 };
 
