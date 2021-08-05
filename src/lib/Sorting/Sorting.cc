@@ -58,3 +58,33 @@ std::vector<int> Sorting::getSelectionSortingMessage(std::vector<int> input_Vec)
 	}
 	return input_Vec;
 }
+
+std::vector<int> Sorting::getCountingSortingMessage(std::vector<int> input_Vec){
+	int n = input_Vec.size();
+	int max_element = -INT_MAX;
+	int min_element = +INT_MAX;
+	std::vector<int> result;
+
+	for(int i = 0; i < n ; i++){
+		max_element = std::max(input_Vec[i], max_element);
+		min_element = std::min(input_Vec[i], min_element);
+	}
+
+	std::vector<int> freq(max_element + 1, 0);
+	for(int x: input_Vec){
+		freq[x] = freq[x] + 1;
+	}
+
+	int j = 0;
+	for(int i = 0; i < max_element + 1 ; i++){
+
+		while(freq[i]){
+			input_Vec[j] = i;
+			freq[i] = freq[i] - 1;
+			j++;  
+		}
+
+	}
+
+	return input_Vec;
+}
