@@ -10,7 +10,7 @@
 | Binary Search | C++ | BinarySearch |test_BinarySearch|Basic,Optimized, MinOfRotatedArray, InfiniteArray Src:https://www.geeksforgeeks.org/the-ubiquitous-binary-search-set-1/, https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/, https://www.geeksforgeeks.org/given-sorted-array-number-x-find-pair-array-whose-sum-closest-x/|
 | Subarray Sum | C++ | SubarraySum |test_SubarraySum|Basic,Prefix,Kandane,https://www.geeksforgeeks.org/find-subarray-with-given-sum/|
 | Rotation 1 Dimensional | C++ | Rotation1D |test_Rotation1D|Basic-https://www.geeksforgeeks.org/print-array-after-it-is-right-rotated-k-times/|
-| Sorting | C++ | Sorting |test_Sorting|Bubble, Insertion, Selection|
+| Sorting | C++ | Sorting |test_Sorting|Bubble, Insertion, Selection, https://www.geeksforgeeks.org/counting-sort/, Inbuilt-https://www.geeksforgeeks.org/sorting-vector-of-pairs-in-c-set-1-sort-by-first-and-second/,https://www.codechef.com/problems/TACHSTCK|
 
 
 ## Commands to help

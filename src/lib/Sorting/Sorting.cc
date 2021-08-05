@@ -88,3 +88,23 @@ std::vector<int> Sorting::getCountingSortingMessage(std::vector<int> input_Vec){
 
 	return input_Vec;
 }
+
+int pairSticks(std::vector<int> length, int D)
+{
+    // your code goes here
+    sort(length.begin(), length.end());
+    
+    int num = 0;
+    for(int i = 0; i < length.size() - 1;){
+        
+        if((length[i] - length[i+1]) <= D ){
+            num++;
+            i = i + 2;
+        }
+        else{
+            i = i + 1;
+        }
+        
+    }
+    return num;
+}
