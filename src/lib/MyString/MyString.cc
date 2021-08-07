@@ -4,7 +4,42 @@
 
 std::string MyString::getMyStringRouteMessage(char testArray[]){
 
-	 return "NNE";
+	int x = 0;
+	int y = 0;
+
+	for(int i = 0; i<strlen(testArray); i++){
+		switch (testArray[i])
+		{
+			case 'N':
+				x++;
+				break;
+			case 'S':
+				x--;
+				break;
+			case 'E':
+				y++;
+				break;
+			case 'W':
+				y--;
+				break;	
+			default:
+				break;
+		};
+	}
+
+	std::string res;
+
+	if(x > 0 && y > 0){
+		while(x--){
+			res = res + 'N';
+		}
+		while(y--){
+			res = res + 'E';
+		}
+		
+	}
+
+	 return res;
 }
 
 int MyString::getMyStringCount(char testArray[]){
