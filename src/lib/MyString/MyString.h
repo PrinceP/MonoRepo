@@ -3,12 +3,13 @@
 
 #include <string>
 #include <iostream>
-#include <cstring>
+#include <vector>
 
 class MyString {
     public:
         int getMyStringCount(char testArray[]);
         std::string getMyStringRouteMessage(char testArray[]);
+        std::string getcompress(std::vector<char>& str);
 };
 
 #endif

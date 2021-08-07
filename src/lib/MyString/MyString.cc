@@ -64,3 +64,29 @@ bool isPalindrome(std::string str)
     }
     return true;
 }
+
+
+std::string MyString::getcompress(std::vector<char>& str) {
+    // your code goes here
+   std::string output = "";    
+   int n = str.size();
+   for (int i = 0; i < n; i++) {
+ 
+        // Count occurrences of current character
+        int count = 1;
+        while (i < n - 1 && str[i] == str[i + 1]) {
+            count++;
+            i++;
+        }
+ 
+        // Print character and its count
+		if(count == 1){
+			output = output + str[i];	
+		}else{
+			output = output + str[i]; 
+        	output = output + std::to_string(count);
+		}
+            
+    }
+	return output;
+}
