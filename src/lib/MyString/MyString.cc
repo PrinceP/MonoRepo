@@ -86,6 +86,24 @@ bool MyString::arePermutation(std::string A, std::string B)
     return true;
 }
 
+std::string removeDuplicate(std::string s){
+    // your code goes here
+    int char_dict[255] = {0};
+    std::string output;
+    
+    for(int i = 0; i < s.size(); i++){
+        char_dict[s[i] - 'a']++;
+    }
+    for(int i = 0 ; i < 255; i++){
+		if(char_dict[i] != 0){
+		    int x = 'a' + i;
+		    char xx = x;
+            output += xx;
+        }
+    }
+    return output;
+}
+
 std::string MyString::getcompress(std::vector<char>& str) {
     // your code goes here
    std::string output = "";    
