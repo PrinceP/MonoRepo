@@ -28,7 +28,6 @@ std::string MyString::getMyStringRouteMessage(char testArray[]){
 	}
 
 	std::string res;
-
 	if(x > 0 && y > 0){
 		while(x--){
 			res = res + 'N';
@@ -36,10 +35,8 @@ std::string MyString::getMyStringRouteMessage(char testArray[]){
 		while(y--){
 			res = res + 'E';
 		}
-		
 	}
-
-	 return res;
+	return res;
 }
 
 int MyString::getMyStringCount(char testArray[]){
@@ -53,4 +50,17 @@ int MyString::getMyStringCount(char testArray[]){
 	}
 
 	return number_of_space;
+}
+
+bool isPalindrome(std::string str)
+{
+    int n = str.size();
+    int i,j;
+    
+    for(i=0,j=n-1; i<=j ; i++,j-- ){
+        if(str[i] != str[j]){
+            return false;
+        }
+    }
+    return true;
 }
