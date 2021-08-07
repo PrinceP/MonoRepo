@@ -3,10 +3,12 @@
 
 #include <string>
 #include <iostream>
+#include <cstring>
 
 class MyString {
     public:
-        std::string getMyStringRouteMessage(std::string inputStr);
+        int getMyStringCount(char testArray[]);
+        std::string getMyStringRouteMessage(char testArray[]);
 };
 
 #endif
