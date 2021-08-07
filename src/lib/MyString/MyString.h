@@ -11,6 +11,7 @@ class MyString {
         int getMyStringCount(char testArray[]);
         std::string getMyStringRouteMessage(char testArray[]);
         std::string getcompress(std::vector<char>& str);
+        bool arePermutation(std::string A, std::string B);
 };
 
 #endif

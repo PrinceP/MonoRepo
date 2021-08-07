@@ -18,6 +18,8 @@ int main(int argc, char** argv){
     std::cout<< actual2.length()<< std::endl;
     
 
+    std::cout << out->arePermutation("test","ttew");
+
     return EXIT_SUCCESS;
 
 }

@@ -66,6 +66,26 @@ bool isPalindrome(std::string str)
 }
 
 
+bool MyString::arePermutation(std::string A, std::string B)
+{
+    // your code goes here
+    int char_dict[255] = {0};
+    
+    for(int i = 0; i < A.size(); i++){
+        char_dict[A[i] - 'a']++;
+    }
+    for(int i = 0; i < B.size(); i++){
+        char_dict[B[i] - 'a']--;
+    }
+    
+    for(int i = 0 ; i < 255; i++){
+		if(char_dict[i] != 0){
+            return false;
+        }
+    }
+    return true;
+}
+
 std::string MyString::getcompress(std::vector<char>& str) {
     // your code goes here
    std::string output = "";    
