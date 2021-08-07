@@ -104,6 +104,33 @@ std::string removeDuplicate(std::string s){
     return output;
 }
 
+std::string vowel(std::string S){
+    // your code goes here
+    std::string output = "";
+    for(char x: S){
+        if(x == 'a' || x == 'e' || x == 'i' || x == 'o'|| x == 'u'){
+            output += x;
+        }
+    }  
+    return output;
+} 
+
+int binaryToDecimal(std::string s)
+{
+    // your code goes here
+    int x = 0;
+    int i = 0;
+    
+    for(auto c = s.rbegin(); c != s.rend(); ++c) {
+        if(*c == '1'){
+            x += pow(2,i);
+        }
+        i++;
+    }
+    
+    return x;
+    
+}
 std::string MyString::getcompress(std::vector<char>& str) {
     // your code goes here
    std::string output = "";    
