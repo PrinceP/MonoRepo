@@ -64,3 +64,26 @@ std::string ArrayTwoD::getArrayTwoDSpiralMessage(int TwoDArray[][10], int n, int
 	}
 	return res;
 }
+
+ std::vector<int> ArrayTwoD::getArrayTwoDStaircaseMessage(int n, int m, std::vector<std::vector<int>> arr, int key){
+
+	int x = 0;
+	int y = m-1;
+	std::vector<int> res;
+
+	while(x <= n - 1 || y >= 0){
+
+		if(arr[x][y] == key){
+			std::cout << x << " " << y << std::endl; 
+			return res; 
+		}else if(arr[x][y] > key){
+			y--;
+		}
+		else{
+			x++;
+		}
+
+	}
+	std::cout << "Not FOUND"<< std::endl; 
+	return res;
+}

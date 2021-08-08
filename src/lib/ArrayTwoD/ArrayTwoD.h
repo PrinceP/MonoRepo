@@ -9,6 +9,7 @@ class ArrayTwoD {
     public:
         std::string getArrayTwoDSpiralMessage(int TwoDArray[][10], int n, int m);
         std::vector<int> getArrayTwoDWaveMessage(int m, int n, std::vector<std::vector<int>> arr);
+        std::vector<int> getArrayTwoDStaircaseMessage(int m, int n, std::vector<std::vector<int>> arr, int key);
 };
 
 #endif
