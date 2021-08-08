@@ -32,15 +32,35 @@ std::string ArrayTwoD::getArrayTwoDSpiralMessage(int TwoDArray[][10], int n, int
 			}
 			std::cout << TwoDArray[i][startCol] << " ";
 		}
-
 		startRow++;
 		startCol++;
 		endRow--;
 		endCol--;
-
 	}
-
-
-
 	return "";
+}
+
+ std::vector<int> ArrayTwoD::getArrayTwoDWaveMessage(int n, int m, std::vector<std::vector<int>> arr){
+
+	int startRow = 0, startCol = 0;
+	int endRow = n-1, endCol = m-1;
+	int i = endCol;
+	std::vector<int> res;
+
+	while(i >= startCol){
+
+		if(i % 2){
+			//Down
+			for(int j = startRow; j <= endRow; j++){
+				res.push_back(arr[j][i]);
+			}
+		}else{
+			//Up
+			for(int j = endRow; j >= startRow; j--){
+				res.push_back(arr[j][i]);
+			}
+		}
+		i--;	
+	}
+	return res;
 }

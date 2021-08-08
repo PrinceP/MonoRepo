@@ -12,7 +12,7 @@
 | Rotation 1 Dimensional | C++ | Rotation1D |test_Rotation1D|https://www.geeksforgeeks.org/print-array-after-it-is-right-rotated-k-times/|
 | Sorting | C++ | Sorting |test_Sorting|Bubble, Insertion, Selection, https://www.geeksforgeeks.org/counting-sort/, Inbuilt-https://www.geeksforgeeks.org/sorting-vector-of-pairs-in-c-set-1-sort-by-first-and-second/, https://www.codechef.com/problems/TACHSTCK|
 | String | C++ | MyString |test_MyString|Shortest route - cin from main, Count whitespaces, Compress, vowel, permute, decimal|
-| Array 2-D | C++ | ArrayTwoD |test_ArrayTwoD|Spiral|
+| Array 2-D | C++ | ArrayTwoD |test_ArrayTwoD|Spiral, Wave|
 
 
 
