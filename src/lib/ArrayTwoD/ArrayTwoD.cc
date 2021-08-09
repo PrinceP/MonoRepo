@@ -87,3 +87,24 @@ std::string ArrayTwoD::getArrayTwoDSpiralMessage(int TwoDArray[][10], int n, int
 	std::cout << "Not FOUND"<< std::endl; 
 	return res;
 }
+
+//C(line, i) = C(line, i-1) * (line - i + 1) / i
+
+std::vector<std::vector<int>> printPascal(int n){
+	
+	std::vector<std::vector<int>> result;
+	
+	for (int line = 1; line <= n; line++){
+		int C = 1; // used to represent C(line, i)
+		std::vector<int> row;
+		for (int i = 1; i <= line; i++){
+			// The first value in a line is always 1
+			std::cout<< C<<" ";
+			row.push_back(C);
+			C = C * (line - i) / i;
+		}
+		result.push_back(row);
+		std::cout<<"\n";
+	}
+	return result;
+}
