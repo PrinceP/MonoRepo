@@ -56,6 +56,8 @@ int main(int argc, char** argv){
             // std::cout << arr2d[i][j] << std::endl;
         }
     }
+
+    delete []arr2d;
     
     return EXIT_SUCCESS;
 
