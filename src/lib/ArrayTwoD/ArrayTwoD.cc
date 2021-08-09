@@ -158,3 +158,37 @@ int sum(std::vector<std::vector<int>> v, int tli, int tlj, int rbi,
 
 	return res;
 }
+
+std::vector<std::vector<int>> makeZeroes(std::vector<std::vector<int>> input){
+    // your code goes here
+    
+    int R = input.size();
+    int C = input[0].size();
+    
+    std::vector< std::pair<int, int> > indexes ;
+    // vector<vector<int>> res(R, vector<int> ( C , 0));
+    std::vector<std::vector<int>> res = input;
+    
+    for(int i = 0 ; i<input.size(); i++){
+        for(int j=0; j<input[i].size(); j++){
+            if(input[i][j] == 0){
+                indexes.push_back( {i,j} );
+            }
+        }
+    }
+    
+    for(auto p : indexes){
+        
+        int c = C;
+        while(c--){
+            res[p.first][c] = 0; 
+        }
+            
+        int r = R;
+        while(r--){
+            res[r][p.second] = 0; 
+        }
+        
+    }
+    return res;   
+}

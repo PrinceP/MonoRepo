@@ -14,7 +14,7 @@
 | String | C++ | MyString |test_MyString|Shortest route - cin from main, Count whitespaces, Compress, vowel, permute, decimal|
 | Array 2-D | C++ | ArrayTwoD |test_ArrayTwoD|Spiral, Wave, Staircase, Pascal - https://www.geeksforgeeks.org/pascal-triangle/ ,https://www.geeksforgeeks.org/submatrix-sum-queries/ ,|
 | Pointers | C++ | Pointer |test_Pointer|Basics|
-| Vectors | C++ | MyVector |test_MyVector|Basics|
+| Vectors | C++ | MyVector |test_MyVector|Basics, Make zeros, Rotate matrix inplace|
 
 
 ## Commands to help
