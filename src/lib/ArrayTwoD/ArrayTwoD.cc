@@ -89,7 +89,7 @@ std::string ArrayTwoD::getArrayTwoDSpiralMessage(int TwoDArray[][10], int n, int
 }
 
 //C(line, i) = C(line, i-1) * (line - i + 1) / i
-
+// Pascal triangle
 std::vector<std::vector<int>> printPascal(int n){
 	
 	std::vector<std::vector<int>> result;
@@ -107,4 +107,54 @@ std::vector<std::vector<int>> printPascal(int n){
 		std::cout<<"\n";
 	}
 	return result;
+}
+
+// Submatrix sum
+// M rows N columns
+int preProcess(std::vector<std::vector<int>> mat, std::vector<std::vector<int>> &aux, int M, int N)
+{
+   // Copy first row of mat[][] to aux[][]
+   for (int i=0; i<N; i++)
+      aux[0][i] = mat[0][i];
+  
+   // Do column wise sum
+   for (int i=1; i<M; i++)
+      for (int j=0; j<N; j++)
+         aux[i][j] = mat[i][j] + aux[i-1][j];
+  
+   // Do row wise sum
+   for (int i=0; i<M; i++)
+      for (int j=1; j<N; j++)
+         aux[i][j] += aux[i][j-1];
+    return 1;
+}
+
+
+int sum(std::vector<std::vector<int>> v, int tli, int tlj, int rbi,
+                                              int rbj){
+    // your code goes here
+    int M = v.size();
+	int N = v[0].size();
+	
+    std::vector<std::vector<int>> aux( M , std::vector<int> (N, 0));
+    
+	
+	preProcess(v, aux, M, N);
+
+	int res = aux[rbi][rbj];
+
+	 // Remove elements between (0, 0) and (tli-1, rbj)
+    if (tli > 0)
+       res = res - aux[tli-1][rbj];
+  
+    // Remove elements between (0, 0) and (rbi, tlj-1)
+    if (tlj > 0)
+       res = res - aux[rbi][tlj-1];
+  
+    // Add aux[tli-1][tlj-1] as elements between (0, 0)
+    // and (tli-1, tlj-1) are subtracted twice
+    if (tli > 0 && tlj > 0)
+       res = res + aux[tli-1][tlj-1];
+
+	return res;
 }
