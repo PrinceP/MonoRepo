@@ -44,9 +44,26 @@ void updateithBit(int &n, int i, int v){
 //11000 &
 //10000
 void clearlastithBit(int &n, int i){
-    int mask = (-1<<i);
+    int mask = (-1<<(i+1));
     n = n&mask;
 }
+
+//10101
+//11111 << j+1
+//11000 a
+//00100 (1<<i) - 1
+//00011
+//11011 a | b
+//10001 &
+
+void clearBitinRange(int &n, int i, int j){
+    int a = (-1<<(j+1));
+    int b = (1<<i) - 1;
+    int mask = a | b;
+
+    n = n&mask;
+}
+
 
 int main(int argc, char** argv){
     MyBit *greet = new MyBit();
@@ -81,6 +98,11 @@ int main(int argc, char** argv){
 
     clearlastithBit(n,i);
     std::cout << "Clear last i bits = " << getithBit(n,i) << std::endl;
+
+    int j = i + 2;
+    clearBitinRange(n,i,j);
+    std::cout << "Clear i bit = " << getithBit(n,i) << std::endl;
+    std::cout << "Clear j bit = " << getithBit(n,j) << std::endl;
 
     return EXIT_SUCCESS;
 
