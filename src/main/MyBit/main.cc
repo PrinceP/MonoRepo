@@ -64,6 +64,21 @@ void clearBitinRange(int &n, int i, int j){
     n = n&mask;
 }
 
+//10101
+//11111 << j+1
+//11000 a
+//00100 (1<<i) - 1
+//00011
+//11011 a | b
+//10001 &
+//Replace
+
+void replaceBitinRange(int &n, int i, int j, int m){
+    clearBitinRange(n, i, j);
+    int mask = m << i;
+    n = n | mask;
+}
+
 
 int main(int argc, char** argv){
     MyBit *greet = new MyBit();
@@ -103,6 +118,15 @@ int main(int argc, char** argv){
     clearBitinRange(n,i,j);
     std::cout << "Clear i bit = " << getithBit(n,i) << std::endl;
     std::cout << "Clear j bit = " << getithBit(n,j) << std::endl;
+
+    replaceBitinRange(n,i,j,2);
+    std::cout << "Number = " << n << std::endl;
+
+    if( (n&(n-1)) == 0){
+        std::cout << "Number is power of 2 = " << n << std::endl;
+    }else{
+        std::cout << "Number is not a power of 2 = " << n << std::endl;
+    }
 
     return EXIT_SUCCESS;
 
