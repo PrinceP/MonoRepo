@@ -15,6 +15,8 @@
 | Array 2-D | C++ | ArrayTwoD |test_ArrayTwoD|Spiral, Wave, Staircase, Pascal - https://www.geeksforgeeks.org/pascal-triangle/ ,https://www.geeksforgeeks.org/submatrix-sum-queries/ ,|
 | Pointers | C++ | Pointer |test_Pointer|Basics|
 | Vectors | C++ | MyVector |test_MyVector|Basics, Make zeros, Rotate matrix inplace|
+| Bit manipulation | C++ | MyBit |test_MyBit|Basics|
+
 
 
 ## Commands to help
