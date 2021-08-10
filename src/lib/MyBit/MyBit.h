@@ -3,6 +3,8 @@
 
 #include <string>
 #include <vector>
+#include <bitset>
+
 class MyBit {
     public:
         std::string getMyBitMessage();
