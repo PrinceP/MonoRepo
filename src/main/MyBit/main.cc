@@ -17,6 +17,11 @@ void setithBit(int &n, int i){
     n = n|mask;
 }
 
+void updateithBit(int &n, int i, int v){
+    clearithBit(n, i);
+    int mask = (v<<i);
+    n = n|mask;
+}
 
 
 int main(int argc, char** argv){
@@ -45,6 +50,10 @@ int main(int argc, char** argv){
     setithBit(n,i);
     std::cout << "Set ith bit = " << getithBit(n,i) << std::endl;
 
+    int v;
+    std::cin>>v;
+    updateithBit(n,i,v);
+    std::cout << "Update ith bit = " << getithBit(n,i) << std::endl;
 
 
     return EXIT_SUCCESS;
