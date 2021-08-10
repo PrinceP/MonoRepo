@@ -138,6 +138,33 @@ int power(int x, int y, int mod)
     return res;
 }
 
+std::vector<bool> processQueries(std::vector<int> query, int N, std::bitset<10000> bit){
+    std::vector<bool> v;
+    for(int q: query){
+        if(bit[q]){ v.push_back(true); }
+        else{
+            v.push_back(false);
+        }
+    }
+    return v;
+}
+void preprocess(std::bitset<10000> &bit, std::vector<int> arr){
+    
+    bit.reset();
+    bit[0] = 1;
+        
+    for(int i = 0; i < arr.size(); i++){
+        bit |= (bit << arr[i]);
+    }
+}
+std::vector<bool> subsetSum(std::vector<int> arr, std::vector<int> query)
+{
+    int N = query.size();
+    std::bitset<10000> bit;
+    preprocess(bit, arr);
+    return processQueries(query, N,  bit);
+}
+
 int main(int argc, char** argv){
     MyBit *greet = new MyBit();
     std::cout << greet->getMyBitMessage() << std::endl;
