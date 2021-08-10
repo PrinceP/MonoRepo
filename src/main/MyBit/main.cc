@@ -79,6 +79,38 @@ void replaceBitinRange(int &n, int i, int j, int m){
     n = n | mask;
 }
 
+int countBits(int n){
+    int sum = 0;
+    while(n>0){
+        int x = n & 1;
+        sum += x;
+        n = n >> 1;
+    }
+    return sum;
+}
+
+int countfastBits(int n){
+    int sum = 0;
+    while(n>0){
+        sum += 1;
+        n = n & n-1;
+    }
+    return sum;
+}
+
+int converttoBinary(int n){
+    int result = 0;
+    int p = 1;
+
+    while(n>0){
+        int last_bit = n & 1;
+        result += p * last_bit; 
+        p = p * 10;
+        n = n >> 1;
+    }
+    return result;
+}
+
 
 int main(int argc, char** argv){
     MyBit *greet = new MyBit();
@@ -127,6 +159,11 @@ int main(int argc, char** argv){
     }else{
         std::cout << "Number is not a power of 2 = " << n << std::endl;
     }
+
+    std::cout << "Bits set in the number = " << countBits(n) << std::endl;
+    std::cout << "Bits set fast in the number = " << countfastBits(n) << std::endl;
+
+    std::cout << "In binary = " << converttoBinary(n) << std::endl; 
 
     return EXIT_SUCCESS;
 
