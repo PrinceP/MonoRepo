@@ -111,6 +111,32 @@ int converttoBinary(int n){
     return result;
 }
 
+//XORing for a non duplicate 
+int xoring(std::vector<int> v)
+{
+    // your code goes here
+    int ans = 0;
+    for(int i: v){
+        ans = ans ^ i;
+    }   
+    return ans;
+}
+//Division 
+int power(int x, int y, int mod)
+{ 
+    int res = 1;     // Initialize result
+    x = x % mod; 
+    if (x == 0) return 0; // In case x is divisible by p;
+    while (y > 0)
+    {
+        if (y & 1)
+            res = (res*x) % mod;
+        
+        y = y>>1; // y = y/2
+        x = (x*x) % mod;
+    }
+    return res;
+}
 
 int main(int argc, char** argv){
     MyBit *greet = new MyBit();
