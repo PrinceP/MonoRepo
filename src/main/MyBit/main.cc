@@ -12,6 +12,12 @@ void clearithBit(int &n, int i){
     n = n&mask;
 }
 
+void setithBit(int &n, int i){
+    int mask = (1<<i);
+    n = n|mask;
+}
+
+
 
 int main(int argc, char** argv){
     MyBit *greet = new MyBit();
@@ -36,7 +42,9 @@ int main(int argc, char** argv){
     clearithBit(n,i);
     std::cout << "Cleared ith bit = " << getithBit(n,i) << std::endl;
 
-    
+    setithBit(n,i);
+    std::cout << "Set ith bit = " << getithBit(n,i) << std::endl;
+
 
 
     return EXIT_SUCCESS;
