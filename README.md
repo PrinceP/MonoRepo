@@ -16,7 +16,7 @@
 | Pointers | C++ | Pointer |test_Pointer|Basics|
 | Vectors | C++ | MyVector |test_MyVector|Basics, Make zeros, Rotate matrix inplace|
 | Bit manipulation | C++ | MyBit |test_MyBit|Basics, Fast Exponential, XOR, Subset Sum Queries|
-| Recursion | C++ | Recursion |test_Recursion|Occurances, Increasing, fastPower, https://www.geeksforgeeks.org/tiling-problem/ ,|
+| Recursion | C++ | Recursion |test_Recursion|Occurances, Increasing, fastPower, https://www.geeksforgeeks.org/tiling-problem/ ,https://www.geeksforgeeks.org/friends-pairing-problem/, https://www.techiedelight.com/find-n-digit-binary-strings-without-consecutive-1s/ |
 
 
 

@@ -115,6 +115,23 @@ void countStrings(int n, std::string out, int last_digit, std::vector<std::strin
         countStrings(n - 1, out + "1", 1, res);
     }
 }
+//Count Friends
+int countFriendsPairings(std::vector<int> dp, int n)
+{
+    if (dp[n] != -1)
+        return dp[n];
+ 
+    if (n > 2)
+        return dp[n] = countFriendsPairings(dp, n - 1) + (n - 1) * countFriendsPairings(dp, n - 2);
+    else
+        return dp[n] = n;
+}
+
+
+int friendsPairing(int n){   
+    std::vector<int> v(10000,-1);
+    return countFriendsPairings(v,n);
+}
 
 std::vector<std::string> binaryStrings(int n){    
     // int arr[n];
