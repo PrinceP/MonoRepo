@@ -46,6 +46,28 @@ int fastPower(int a, int n){
 }
 
 
+//Tiling prob
+int getNoOfWays(int n, int m)
+{
+    // Base case
+    if (n == 0)
+        return 0;
+    if(n<m){
+        if(1 <= n)
+          return 1;  
+    }
+    if(n==m){
+        return 2;
+    }
+    if(m < n){
+        return getNoOfWays(n-1, m) + getNoOfWays(n-m, m);
+    }
+    return 0;
+}
+int tillingProblem(int n, int m){   
+    return getNoOfWays(n,m);
+}
+
 int main(int argc, char** argv){
     Recursion *greet = new Recursion();
     std::cout << greet->getRecursionMessage() << std::endl;
