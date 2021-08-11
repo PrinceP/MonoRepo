@@ -16,7 +16,7 @@
 | Pointers | C++ | Pointer |test_Pointer|Basics|
 | Vectors | C++ | MyVector |test_MyVector|Basics, Make zeros, Rotate matrix inplace|
 | Bit manipulation | C++ | MyBit |test_MyBit|Basics, Fast Exponential, XOR, Subset Sum Queries|
-| Recursion | C++ | Recursion |test_Recursion|Occurances, Increasing|
+| Recursion | C++ | Recursion |test_Recursion|Occurances, Increasing, fastPower|
 
 
 
