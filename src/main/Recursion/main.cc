@@ -68,6 +68,69 @@ int tillingProblem(int n, int m){
     return getNoOfWays(n,m);
 }
 
+
+//Generate strings of "01"
+// Function to print the output
+std::string printTheArray(int arr[], int n)
+{
+    std::string one_str = ""; 
+    for (int i = 0; i < n; i++) {
+        one_str += std::to_string(arr[i]);
+    }
+    return one_str;
+}
+ 
+// Function to generate all binary strings
+void generateAllBinaryStrings(int n, int arr[], int i, std::vector<std::string> &res)
+{
+    if (i == n) {
+        res.push_back(printTheArray(arr, n));
+        return;
+    }
+ 
+    arr[i] = 0;
+    generateAllBinaryStrings(n, arr, i + 1, res);
+ 
+    arr[i] = 1;
+    generateAllBinaryStrings(n, arr, i + 1, res);
+}
+
+// Function to print all n–digit binary strings without any consecutive 1's
+void countStrings(int n, std::string out, int last_digit, std::vector<std::string> &res)
+{
+    // if the number becomes n–digit, print it
+    if (n == 0)
+    {
+        // cout << out << endl;
+        res.push_back(out);
+        return;
+    }
+ 
+    // append 0 to the result and recur with one less digit
+    countStrings(n - 1, out + "0", 0, res);
+ 
+    // append 1 to the result and recur with one less digit
+    // only if the last digit is 0
+    if (last_digit == 0) {
+        countStrings(n - 1, out + "1", 1, res);
+    }
+}
+
+std::vector<std::string> binaryStrings(int n){    
+    // int arr[n];
+    // vector<string> res;
+    // generateAllBinaryStrings(n, arr, 0, res);
+    
+    std::vector<std::string> res;
+    std::string out = "";
+    countStrings(n, out, 0, res);   
+    return res;
+}
+
+
+
+
+
 int main(int argc, char** argv){
     Recursion *greet = new Recursion();
     std::cout << greet->getRecursionMessage() << std::endl;
