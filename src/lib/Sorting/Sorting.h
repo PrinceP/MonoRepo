@@ -14,6 +14,7 @@ class Sorting {
         std::vector<int> getCountingSortingMessage(std::vector<int> input_Vec);
 
         std::vector<int> getMergeSortingMessage(std::vector<int> input_Vec);
+        std::vector<int> getQuickSortingMessage(std::vector<int> input_Vec);
 };
 
 #endif

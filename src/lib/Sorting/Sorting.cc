@@ -161,3 +161,37 @@ std::vector<int> Sorting::getMergeSortingMessage(std::vector<int> input_Vec){
 	return res;
 
 }
+
+int Partition(std::vector<int> &input_Vec, int s, int e){
+	int pivot = input_Vec[e];
+	int i = s - 1;
+
+	for(int j = s; j < e ; j++){
+		if(input_Vec[j] < pivot){
+			i++;
+			std::swap(input_Vec[i], input_Vec[j]);
+		}
+	}
+
+	std::swap(input_Vec[i+1], input_Vec[e]);
+	return i + 1;
+
+}
+
+void QuickSort(std::vector<int> &input_Vec, int s, int e){
+	if(s >= e)
+		return;
+	
+	int p = Partition(input_Vec, s, e);
+	QuickSort(input_Vec, s, p-1);
+	QuickSort(input_Vec, p+1, e);
+}
+
+std::vector<int> Sorting::getQuickSortingMessage(std::vector<int> input_Vec){
+
+	std::vector<int> res = input_Vec;
+	QuickSort(res, 0, input_Vec.size()-1);
+	return res;
+
+}
+
