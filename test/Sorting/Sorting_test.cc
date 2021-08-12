@@ -8,6 +8,10 @@ TEST(SortingShould, ReturnHelloWorld){
 	std::vector<int> actual2 = out->getInsertionSortingMessage(sample_arr);
 	std::vector<int> actual3 = out->getSelectionSortingMessage(sample_arr);
 	std::vector<int> actual4 = out->getCountingSortingMessage(sample_arr);
+
+
+	std::vector<int> actual5 = out->getCountingSortingMessage(sample_arr);
+
 	
 	
 
@@ -36,6 +40,13 @@ TEST(SortingShould, ReturnHelloWorld){
 	for (int i = 0; i < expected.size(); ++i) {
 		EXPECT_EQ(actual4[i], expected[i]) << "Vectors expected and actual differ at index " << i;
 	}
+
+	ASSERT_EQ(actual5.size(), expected.size()) << "Vectors expected and actual are of unequal length";
+
+	for (int i = 0; i < expected.size(); ++i) {
+		EXPECT_EQ(actual5[i], expected[i]) << "Vectors expected and actual differ at index " << i;
+	}
+
 
 
 

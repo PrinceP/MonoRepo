@@ -108,3 +108,56 @@ int pairSticks(std::vector<int> length, int D)
     }
     return num;
 }
+
+void Merge(std::vector<int> &input_Vec, int s, int e){
+	int mid = (s + (e-s)/2);
+	int i = s;
+	int j = mid + 1;
+
+	std::vector<int> temp;
+	while(i <= mid && j <= e){
+		if(input_Vec[i] <= input_Vec[j]){
+			temp.push_back(input_Vec[i]);
+			i++;
+		}else{
+			temp.push_back(input_Vec[j]);
+			j++;
+		}
+	}
+	while(i <= mid){
+		temp.push_back(input_Vec[i]);
+		i++;
+	}
+	while(j <= e){
+		temp.push_back(input_Vec[j]);
+		j++;
+	}
+	int k = 0;
+	for(int idx = s; idx <= e; idx++){
+		input_Vec[idx] = temp[k++];
+	}
+	return;
+}
+
+void MergeSort(std::vector<int> &input_Vec, int s, int e){
+
+	if(s >= e)
+		return;
+
+	int mid = (s + (e-s)/2);
+
+	MergeSort(input_Vec, s, mid);
+	MergeSort(input_Vec, mid+1, e);
+	return Merge(input_Vec, s, e);
+
+}
+
+
+
+std::vector<int> Sorting::getMergeSortingMessage(std::vector<int> input_Vec){
+
+	std::vector<int> res = input_Vec;
+	MergeSort(res, 0, input_Vec.size()-1);
+	return res;
+
+}

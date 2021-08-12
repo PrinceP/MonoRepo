@@ -10,13 +10,14 @@
 | Binary Search | C++ | BinarySearch |test_BinarySearch|Basic,Optimized, MinOfRotatedArray, InfiniteArray Src:https://www.geeksforgeeks.org/the-ubiquitous-binary-search-set-1/, https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/, https://www.geeksforgeeks.org/given-sorted-array-number-x-find-pair-array-whose-sum-closest-x/|
 | Subarray Sum | C++ | SubarraySum |test_SubarraySum|Basic,Prefix,Kandane,https://www.geeksforgeeks.org/find-subarray-with-given-sum/|
 | Rotation 1 Dimensional | C++ | Rotation1D |test_Rotation1D|https://www.geeksforgeeks.org/print-array-after-it-is-right-rotated-k-times/|
-| Sorting | C++ | Sorting |test_Sorting|Bubble, Insertion, Selection, https://www.geeksforgeeks.org/counting-sort/, Inbuilt-https://www.geeksforgeeks.org/sorting-vector-of-pairs-in-c-set-1-sort-by-first-and-second/, https://www.codechef.com/problems/TACHSTCK|
+| Sorting | C++ | Sorting |test_Sorting|Bubble, Insertion, Selection, https://www.geeksforgeeks.org/counting-sort/, Inbuilt-https://www.geeksforgeeks.org/sorting-vector-of-pairs-in-c-set-1-sort-by-first-and-second/, https://www.codechef.com/problems/TACHSTCK, MergeSort-D&C|
 | String | C++ | MyString |test_MyString|Shortest route - cin from main, Count whitespaces, Compress, vowel, permute, decimal|
 | Array 2-D | C++ | ArrayTwoD |test_ArrayTwoD|Spiral, Wave, Staircase, Pascal - https://www.geeksforgeeks.org/pascal-triangle/ ,https://www.geeksforgeeks.org/submatrix-sum-queries/ ,|
 | Pointers | C++ | Pointer |test_Pointer|Basics|
 | Vectors | C++ | MyVector |test_MyVector|Basics, Make zeros, Rotate matrix inplace|
 | Bit manipulation | C++ | MyBit |test_MyBit|Basics, Fast Exponential, XOR, Subset Sum Queries|
 | Recursion | C++ | Recursion |test_Recursion|Occurances, Increasing, fastPower, https://www.geeksforgeeks.org/tiling-problem/ ,https://www.geeksforgeeks.org/friends-pairing-problem/, https://www.techiedelight.com/find-n-digit-binary-strings-without-consecutive-1s/ |
+
 
 
 

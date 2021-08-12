@@ -12,6 +12,8 @@ class Sorting {
         std::vector<int> getInsertionSortingMessage(std::vector<int> input_Vec);
         std::vector<int> getSelectionSortingMessage(std::vector<int> input_Vec);
         std::vector<int> getCountingSortingMessage(std::vector<int> input_Vec);
+
+        std::vector<int> getMergeSortingMessage(std::vector<int> input_Vec);
 };
 
 #endif
