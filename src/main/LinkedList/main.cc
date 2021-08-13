@@ -17,7 +17,7 @@ int main(int argc, char** argv){
     ll.insertAfter(5,5);
 
     ll.printLinkedList();
-    
+
     ll.popFront();
 
     ll.printLinkedList();
@@ -26,6 +26,9 @@ int main(int argc, char** argv){
     
     ll.printLinkedList();
 
+    ll.reverseList();
+
+    ll.printLinkedList();
     
     return EXIT_SUCCESS;
 }

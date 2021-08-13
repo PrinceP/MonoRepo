@@ -111,6 +111,23 @@ class LinkedList {
             temp = temp->next;
             delete temp;
         }
+
+        void reverseList(){
+            
+            Node* current = head;
+            Node* prev = NULL;
+            Node* temp;
+
+            while(current){
+                temp = current->next;
+                current->next = prev;
+                prev = current;
+                current = temp;
+            }
+            temp = head;
+            head = tail;
+            tail = temp;
+        }
         
 
 
