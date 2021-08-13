@@ -14,10 +14,18 @@ int main(int argc, char** argv){
     ll.pushBack(6);
     ll.pushFront(0);
     
-    ll.insertAfter(5,10);
+    ll.insertAfter(5,5);
+
+    ll.printLinkedList();
+    
+    ll.popFront();
 
     ll.printLinkedList();
 
-    return EXIT_SUCCESS;
+    ll.popBack();
+    
+    ll.printLinkedList();
 
+    
+    return EXIT_SUCCESS;
 }

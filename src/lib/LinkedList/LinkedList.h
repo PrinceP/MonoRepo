@@ -8,9 +8,15 @@ class Node {
     int data;
 
     public:
-        Node* next;
         Node(int d):data(d),next(NULL){}
-
+        ~Node(){
+            if(next != NULL){
+                delete next;
+            }
+            std::cout << "Deleted "<< data << std::endl;
+            
+        }
+        Node* next;
         int getData(){
             return data;
         }
@@ -25,13 +31,21 @@ class LinkedList {
     public:
         LinkedList():head(NULL),tail(NULL){}
 
+        ~LinkedList(){
+            if(head != NULL){
+                delete head;
+            }
+        }
+
         std::string getLinkedListMessage();
         
         void printLinkedList(){
-            while(head){
-                std::cout << head->getData()<<" ";
-                head = head->next;
+            Node* temp = head;
+            while(temp){
+                std::cout << temp->getData()<<" ";
+                temp = temp->next;
             }
+            std::cout << std::endl;
         }
 
         void pushFront(int new_data){
@@ -77,10 +91,28 @@ class LinkedList {
                     n->next = temp->next;
                     temp->next = n;
                 }
-                
-
             }
         }
+
+        void popFront(){
+            Node* temp = head;
+            head = head->next;
+            temp->next = NULL;
+            delete temp;
+        }
+        
+        void popBack(){
+            Node* temp = head;
+            while(temp->next != tail){
+                temp = temp->next;
+            }
+            tail = temp;
+            tail->next = NULL;
+            temp = temp->next;
+            delete temp;
+        }
+        
+
 
 
 };
