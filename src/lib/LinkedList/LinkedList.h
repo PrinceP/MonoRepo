@@ -144,7 +144,30 @@ class LinkedList {
             
             return temp2->getData();
         }
+
+        void deleteTail(){
+            
+            if (head == NULL)
+                return;
         
+            if (head->next == NULL) {
+                delete head;
+                return;
+            }
+            
+            Node* temp1 = head;
+            Node* temp2 = head->next;
+            while(temp2->next != NULL){
+                temp1 = temp1->next;
+                temp2 = temp2->next;
+            }
+            
+            temp1->next = NULL;
+            tail = temp1;
+            delete temp2;
+            
+            return;
+        }
 
 
 };

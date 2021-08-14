@@ -31,6 +31,10 @@ int main(int argc, char** argv){
     ll.printLinkedList();
 
     std::cout << ll.kthLastElement(4) << std::endl;
+
+    ll.deleteTail();
+    
+    ll.printLinkedList();
     
     return EXIT_SUCCESS;
 }
