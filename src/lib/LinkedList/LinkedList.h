@@ -129,7 +129,22 @@ class LinkedList {
             tail = temp;
         }
         
-
+        int kthLastElement(int k){
+           //Complete this function to return kth last element
+            Node* temp1 = head;
+            Node* temp2 = head;
+            while(k--){
+                temp1 = temp1->next;
+            }
+            
+            while(temp1){
+                temp2 = temp2->next;
+                temp1 = temp1->next;
+            }
+            
+            return temp2->getData();
+        }
+        
 
 
 };

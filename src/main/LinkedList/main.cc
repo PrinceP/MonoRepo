@@ -29,6 +29,8 @@ int main(int argc, char** argv){
     ll.reverseList();
 
     ll.printLinkedList();
+
+    std::cout << ll.kthLastElement(4) << std::endl;
     
     return EXIT_SUCCESS;
 }
