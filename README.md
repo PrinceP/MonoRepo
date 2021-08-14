@@ -30,7 +30,7 @@
 
 | Programs |Language|Bazel build|Bazel test|Remarks|
 | ------ | ------ | ------ |------ | ------ |
-| Colab | - | - |-||
+| Repnet Colab | - | - |-|src/colabs/repnet/repnet_colab.ipynb|
 
 ## Commands to help
 
