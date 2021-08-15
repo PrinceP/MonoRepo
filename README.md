@@ -31,7 +31,7 @@
 | Programs |Language|Bazel build|Bazel test|Remarks|
 | ------ | ------ | ------ |------ | ------ |
 | Repnet Colab | - | - |-|src/colabs/repnet/repnet_colab.ipynb|
-
+| GAN Colabs | - | - |-|src/colabs/GAN|
 ## Commands to help
 
 - Generate a sample project work (BinarySearch) with test and main
