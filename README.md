@@ -32,6 +32,8 @@
 | ------ | ------ | ------ |------ | ------ |
 | Repnet Colab | - | - |-|src/colabs/repnet/repnet_colab.ipynb|
 | GAN Colabs | - | - |-|src/colabs/GAN|
+| YOLO Colabs | - | - |-|src/colabs/Yolo|
+
 ## Commands to help
 
 - Generate a sample project work (BinarySearch) with test and main
