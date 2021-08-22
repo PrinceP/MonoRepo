@@ -37,6 +37,10 @@ class LinkedList {
             }
         }
 
+        Node* getHead(){
+            return head;
+        }
+
         std::string getLinkedListMessage();
         
         void printLinkedList(){
@@ -167,6 +171,28 @@ class LinkedList {
             delete temp2;
             
             return;
+        }
+
+         Node* mergeList(Node* root1, Node* root2){
+            Node* p_curr = root1;
+            Node* q_curr = root2;
+            Node* p_next;
+            Node* q_next;
+            
+            while(p_curr != NULL  && q_curr != NULL){
+                
+                p_next = p_curr->next;
+                q_next = q_curr->next;
+
+                q_curr->next = p_next;
+                p_curr->next = q_curr;
+                
+                p_curr = p_next;
+                q_curr = q_next;
+
+            }
+            
+            return p_curr;
         }
 
 

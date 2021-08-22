@@ -35,6 +35,14 @@ int main(int argc, char** argv){
     ll.deleteTail();
     
     ll.printLinkedList();
+
+    LinkedList ll2;
+    ll2.pushFront(11);
+    ll2.pushBack(22);
+    ll2.pushBack(33);
+    ll2.pushBack(44);
+
+    ll.mergeList(ll.getHead(),ll2.getHead());
     
     return EXIT_SUCCESS;
 }
