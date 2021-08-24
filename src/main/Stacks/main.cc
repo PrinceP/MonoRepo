@@ -2,6 +2,21 @@
 #include "src/lib/Stacks/Stacks.h"
 
 
+void insertAtbottom(std::stack<char> &s, char data){
+
+    if(s.empty()){
+        s.push(data);
+        return;
+    }
+
+    char temp = s.top();
+    s.pop();
+    insertAtbottom(s, data);
+    s.push(temp);
+}
+
+
+
 int main(int argc, char** argv){
 
     Stacks *greet = new Stacks();
@@ -42,11 +57,12 @@ int main(int argc, char** argv){
     s3.push('l');
     s3.push('o');
 
+    insertAtbottom(s3,'!');
+
     while(!s3.empty()){
         std::cout << s3.top() << std::endl;
         s3.pop();
     }
-
     
 
     return EXIT_SUCCESS;
