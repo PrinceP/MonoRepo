@@ -34,6 +34,20 @@ int main(int argc, char** argv){
         s2.pop();
     }
 
+    std::cout << "Using Stacks " << std::endl;
+    std::stack<char> s3;
+    s3.push('h');
+    s3.push('e');
+    s3.push('l');
+    s3.push('l');
+    s3.push('o');
+
+    while(!s3.empty()){
+        std::cout << s3.top() << std::endl;
+        s3.pop();
+    }
+
+    
 
     return EXIT_SUCCESS;
 
