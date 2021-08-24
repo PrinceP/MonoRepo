@@ -15,6 +15,19 @@ void insertAtbottom(std::stack<char> &s, char data){
     s.push(temp);
 }
 
+void reverse(std::stack<char> &s){
+
+    if(s.empty()){
+        return;
+    }
+
+    char temp = s.top();
+    s.pop();
+    reverse(s);
+    insertAtbottom(s, temp);
+    
+}
+
 
 
 int main(int argc, char** argv){
@@ -57,7 +70,8 @@ int main(int argc, char** argv){
     s3.push('l');
     s3.push('o');
 
-    insertAtbottom(s3,'!');
+    // insertAtbottom(s3,'!');
+    reverse(s3);
 
     while(!s3.empty()){
         std::cout << s3.top() << std::endl;
