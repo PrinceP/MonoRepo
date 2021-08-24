@@ -3,6 +3,9 @@
 
 #include <string>
 #include "stackll.h"
+#include "stackvec.h"
+
+#include <stack>
 
 class Stacks {
     public:
