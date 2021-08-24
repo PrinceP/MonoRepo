@@ -28,6 +28,25 @@ void reverse(std::stack<char> &s){
     
 }
 
+int reverse(int n){
+	std::stack<int> s;
+	
+	while(n){
+	    int i = n%10;
+	    s.push(i);
+	    n = n / 10;
+	}
+    
+    int res = 0;
+	int i = 0;
+	while(!s.empty()){
+	    int x = s.top();
+	    res += pow(10,i)*x;
+	    i++;
+	    s.pop();
+	}
+	return res;
+}
 
 
 int main(int argc, char** argv){

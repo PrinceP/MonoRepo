@@ -6,7 +6,7 @@
 #include "stackvec.h"
 
 #include <stack>
-
+#include <cmath>
 class Stacks {
     public:
         std::string getStacksMessage();
