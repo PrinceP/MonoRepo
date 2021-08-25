@@ -48,6 +48,32 @@ int reverse(int n){
 	return res;
 }
 
+std::vector<int> getSpanStocks(std::vector<int> stocks){
+
+    std::stack<int> s;
+    std::vector<int> result_span;
+    result_span.push_back(1);
+    s.push(0);
+
+    for(int i=1; i<=stocks.size()-1; i++){
+
+        int currentPrice = stocks[i];
+        while(!s.empty() && stocks[s.top()] <= currentPrice){
+            s.pop();
+        }
+        if(!s.empty()){
+            int highestPrice = s.top();
+            result_span.push_back(i - highestPrice);
+        }
+        else{
+            result_span.push_back(i+1);
+        }
+        s.push(i);
+    }
+
+    return result_span;
+}
+
 
 int main(int argc, char** argv){
 
