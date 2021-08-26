@@ -16,3 +16,4 @@ bazel-*
 target/
 # VSCode
 .vscode/
+.DS_Store/
