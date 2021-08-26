@@ -74,6 +74,39 @@ std::vector<int> getSpanStocks(std::vector<int> stocks){
     return result_span;
 }
 
+//11, 13, 21, 3
+//13, 21, -1, -1
+
+std::vector<int> getNextGreaterElement(std::vector<int> input){
+
+    std::stack<int> s;
+    std::vector<int> result;
+    s.push(input[0]);
+
+    for(int i=1; i<=input.size()-1; i++){
+
+        if (s.empty()) {
+            s.push(input[i]);
+            continue;
+        }
+
+        int currentElement = input[i];
+        while(!s.empty() && s.top() < currentElement){
+            result.push_back(input[i]);
+            s.pop();
+        }
+        
+        s.push(input[i]);
+    }
+
+    while(!s.empty()){
+        result.push_back(-1);
+        s.pop();
+    }
+
+    return result;
+}
+
 
 int main(int argc, char** argv){
 
