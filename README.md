@@ -18,7 +18,8 @@
 | Vectors | C++ | MyVector |test_MyVector|Basics, Make zeros, Rotate matrix inplace|
 | Bit manipulation | C++ | MyBit |test_MyBit|Basics, Fast Exponential, XOR, Subset Sum Queries|
 | Recursion | C++ | Recursion |test_Recursion|Occurances, Increasing, fastPower, https://www.geeksforgeeks.org/tiling-problem/ ,https://www.geeksforgeeks.org/friends-pairing-problem/, https://www.techiedelight.com/find-n-digit-binary-strings-without-consecutive-1s/ |
-| Linked List | C++ | LinkedList |test_LinkedList|Reverse, Delete|
+| Linked List | C++ | LinkedList |test_LinkedList|Reverse, Delete, Delete tail, Delete Klast|
+| Stacks | C++ | Stacks |test_Stacks|Insert At bottom, reverse, StockSpan, https://www.geeksforgeeks.org/next-greater-element/ , https://www.geeksforgeeks.org/find-expression-duplicate-parenthesis-not/, https://www.geeksforgeeks.org/largest-rectangle-under-histogram/ |
 
 ### OPENCV
 
@@ -26,6 +27,13 @@
 | ------ | ------ | ------ |------ | ------ |
 | OpenCV_Work | C++ | OpenCV_Work |-||
 
+### Tensorflow
+
+| Programs |Language|Bazel build|Bazel test|Remarks|
+| ------ | ------ | ------ |------ | ------ |
+| Repnet Colab | - | - |-|src/colabs/repnet/repnet_colab.ipynb|
+| GAN Colabs | - | - |-|src/colabs/GAN|
+| YOLO Colabs | - | - |-|src/colabs/Yolo|
 
 ## Commands to help
 

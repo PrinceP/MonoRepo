@@ -31,10 +31,5 @@ http_archive(
 #
 #load("@rules_foreign_cc//:workspace_definitions.bzl", "rules_foreign_cc_dependencies")
 #
-#rules_foreign_cc_dependencies()
 
-new_local_repository(
-    name = "opencv",
-    path = "/usr/local/opt/opencv@4",
-    build_file = "BUILD",
-)
+#rules_foreign_cc_dependencies()

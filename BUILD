@@ -1,5 +1,5 @@
 #load("@rules_foreign_cc//tools/build_defs:cmake.bzl", "cmake_external")
-
+#
 #cmake_external(
 #    name = "opencv",
 #    cmake_options = [
@@ -20,12 +20,3 @@
 #    ],
 #    visibility = ["//visibility:public"],
 #)
-
-cc_library(
-    name = "opencv",
-    srcs = glob(["lib/*.dylib"]),
-    hdrs = glob(["include/opencv4/opencv2/**/*.h*"]),
-    includes = ["include/opencv4"],
-    visibility = ["//visibility:public"],
-    linkstatic = 1,
-)
