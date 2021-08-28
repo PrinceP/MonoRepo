@@ -26,6 +26,7 @@
 | Programs |Language|Bazel build|Bazel test|Remarks|
 | ------ | ------ | ------ |------ | ------ |
 | OpenCV_Work | C++ | OpenCV_Work |-||
+| PipeCounter | Python | bazel-bin/src/main/PipeCounter/counter |-||
 
 ### Tensorflow
 
