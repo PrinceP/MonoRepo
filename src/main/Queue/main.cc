@@ -39,6 +39,23 @@ int main(int argc, char** argv){
         q1.pop();
     }
 
+    std::cout << "Stack using queue" << std::endl;
+    StackUsingQueue q3;
+    q3.push(1);
+    q3.push(2);
+    q3.push(3);
+    q3.push(4);
+
+    q3.pop();
+    q3.pop();
+    
+    q3.push(5);
+
+    while(!q3.empty()){
+        std::cout << q3.top() << std::endl;
+        q3.pop();
+    }
+
     return EXIT_SUCCESS;
 
 }
