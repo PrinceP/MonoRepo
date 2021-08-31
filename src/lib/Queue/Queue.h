@@ -2,6 +2,7 @@
 #define TEMPLATE_GREETING_H
 
 #include <string>
+#include <queue>
 
 class Queue {
 

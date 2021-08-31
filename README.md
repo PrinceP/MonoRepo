@@ -20,7 +20,7 @@
 | Recursion | C++ | Recursion |test_Recursion|Occurances, Increasing, fastPower, https://www.geeksforgeeks.org/tiling-problem/ ,https://www.geeksforgeeks.org/friends-pairing-problem/, https://www.techiedelight.com/find-n-digit-binary-strings-without-consecutive-1s/ |
 | Linked List | C++ | LinkedList |test_LinkedList|Reverse, Delete, Delete tail, Delete Klast|
 | Stacks | C++ | Stacks |test_Stacks|Insert At bottom, reverse, StockSpan, https://www.geeksforgeeks.org/next-greater-element/ , https://www.geeksforgeeks.org/find-expression-duplicate-parenthesis-not/, https://www.geeksforgeeks.org/largest-rectangle-under-histogram/ |
-| Queue | C++ | Queue |test_Queue|Circular array|
+| Queue | C++ | Queue |test_Queue|Circular array,|
 
 ### OPENCV
 
