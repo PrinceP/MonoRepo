@@ -218,3 +218,4 @@ w &= w - \alpha . dW\\
 b &= b - \alpha . db\\
 \end{split}
 $ --> <img style="transform: translateY(0.1em); background: white;" src="../../../svg/c8KviIFNCV.svg">
+
