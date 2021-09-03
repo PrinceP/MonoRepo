@@ -4,8 +4,13 @@
 int main(int argc, char** argv){
     BinaryTree *greet = new BinaryTree();
     std::cout << greet->getBinaryTreeMessage() << std::endl;
-
-    greet->parsePreOrder();
+    std::cout << "Take input" << std::endl;
+    
+    Node* root = greet->parsePreOrder();
+    
+    std::cout << "Print preorder input" << std::endl;
+    greet->printPreOrder(root);
+    
     return EXIT_SUCCESS;
 
 }

@@ -20,3 +20,14 @@ Node* BinaryTree::parsePreOrder(){
 	return n;
 
 }
+
+void BinaryTree::printPreOrder(Node* root){
+
+	if(root == NULL){
+		return;
+	}
+	std::cout<< root->getData() << std::endl;
+	printPreOrder(root->left);
+	printPreOrder(root->right);
+
+}

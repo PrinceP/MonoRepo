@@ -11,6 +11,9 @@ public:
     Node* left;
     Node* right;
     Node(int d):data(d),left(NULL),right(NULL){}
+    int getData(){
+        return data;
+    }
 
 };
 
@@ -20,6 +23,7 @@ class BinaryTree {
         std::string getBinaryTreeMessage();
 
         Node* parsePreOrder();
+        void printPreOrder(Node* root);
 };
 
 #endif
