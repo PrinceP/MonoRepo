@@ -24,6 +24,8 @@ class BinaryTree {
 
         Node* parsePreOrder();
         void printPreOrder(Node* root);
+        void printInOrder(Node* root);
+        
 };
 
 #endif

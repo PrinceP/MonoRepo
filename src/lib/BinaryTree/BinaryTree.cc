@@ -31,3 +31,14 @@ void BinaryTree::printPreOrder(Node* root){
 	printPreOrder(root->right);
 
 }
+
+void BinaryTree::printInOrder(Node* root){
+
+	if(root == NULL){
+		return;
+	}
+	printInOrder(root->left);
+	std::cout<< root->getData() << std::endl;
+	printInOrder(root->right);
+
+}

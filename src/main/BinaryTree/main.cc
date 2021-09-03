@@ -10,6 +10,9 @@ int main(int argc, char** argv){
     
     std::cout << "Print preorder input" << std::endl;
     greet->printPreOrder(root);
+
+    std::cout << "Print inorder input" << std::endl;
+    greet->printInOrder(root);
     
     return EXIT_SUCCESS;
 
