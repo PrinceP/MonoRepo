@@ -42,3 +42,13 @@ void BinaryTree::printInOrder(Node* root){
 	printInOrder(root->right);
 
 }
+
+void BinaryTree::printPostOrder(Node* root){
+
+	if(root == NULL){
+		return;
+	}
+	printPostOrder(root->left);
+	printPostOrder(root->right);
+	std::cout<< root->getData() << std::endl;
+}

@@ -14,6 +14,9 @@ int main(int argc, char** argv){
     std::cout << "Print inorder input" << std::endl;
     greet->printInOrder(root);
     
+    std::cout << "Print postorder input" << std::endl;
+    greet->printPostOrder(root);
+    
     return EXIT_SUCCESS;
 
 }
