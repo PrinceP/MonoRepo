@@ -24,6 +24,8 @@ class BinaryTree {
         std::string getBinaryTreeMessage();
 
         Node* parsePreOrder();
+        Node* parseLevelOrder();
+        
         void printPreOrder(Node* root);
         void printInOrder(Node* root);
         void printPostOrder(Node* root);

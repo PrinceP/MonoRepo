@@ -89,3 +89,37 @@ void BinaryTree::printLevelOrder(Node* root){
 	}
 
 }
+
+
+Node* BinaryTree::parseLevelOrder(){
+
+	int d;
+	std::cin>>d;
+
+	Node* root = new Node(d);
+
+	std::queue<Node*> q;
+	q.push(root);
+
+	while(!q.empty()){
+
+		Node* current = q.front();
+		q.pop();
+
+		int c1, c2;
+		std::cin>>c1>>c2;
+
+		if(c1 != -1){
+			current->left = new Node(c1);
+			q.push(current->left);
+		}
+
+		if(c2 != -1){
+			current->right = new Node(c2);
+			q.push(current->right);
+		}
+
+	}
+
+	return root;
+}

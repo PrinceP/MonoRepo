@@ -3,11 +3,12 @@
 
 int main(int argc, char** argv){
 
-    //2 3 4 7 -1 -1 -1 10 -1 -1 8 18 -1 -1 -1
-    
+    //2 3 4 7 -1 -1 -1 10 -1 -1 8 18 -1 -1 -1 - Preorder input
+    //2 3 8 4 10 18 -1 7 -1 -1 -1 -1 -1 -1 -1 - Level order input
+
     BinaryTree *greet = new BinaryTree();
     std::cout << greet->getBinaryTreeMessage() << std::endl;
-    std::cout << "Take input" << std::endl;
+    std::cout << "Take preorder input" << std::endl;
     
     Node* root = greet->parsePreOrder();
     
@@ -23,7 +24,14 @@ int main(int argc, char** argv){
     std::cout << "Print levelorder input" << std::endl;
     greet->printLevelOrder(root);
     
+    std::cout << "Take level order input" << std::endl;
+    Node* root2 = greet->parseLevelOrder();
     
+    std::cout << "Print levelorder input" << std::endl;
+    greet->printLevelOrder(root2);
+    
+    
+
     return EXIT_SUCCESS;
 
 }
