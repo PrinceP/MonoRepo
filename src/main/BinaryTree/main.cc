@@ -2,6 +2,9 @@
 #include "src/lib/BinaryTree/BinaryTree.h"
 
 int main(int argc, char** argv){
+
+    //2 3 4 7 -1 -1 -1 10 -1 -1 8 18 -1 -1 -1
+    
     BinaryTree *greet = new BinaryTree();
     std::cout << greet->getBinaryTreeMessage() << std::endl;
     std::cout << "Take input" << std::endl;
@@ -16,6 +19,10 @@ int main(int argc, char** argv){
     
     std::cout << "Print postorder input" << std::endl;
     greet->printPostOrder(root);
+
+    std::cout << "Print levelorder input" << std::endl;
+    greet->printLevelOrder(root);
+    
     
     return EXIT_SUCCESS;
 

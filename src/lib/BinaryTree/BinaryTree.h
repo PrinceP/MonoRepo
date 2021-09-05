@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include <queue>
 
 class Node{
     int data;
@@ -26,6 +27,7 @@ class BinaryTree {
         void printPreOrder(Node* root);
         void printInOrder(Node* root);
         void printPostOrder(Node* root);
+        void printLevelOrder(Node* root);
         
 };
 

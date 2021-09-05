@@ -52,3 +52,40 @@ void BinaryTree::printPostOrder(Node* root){
 	printPostOrder(root->right);
 	std::cout<< root->getData() << std::endl;
 }
+
+void BinaryTree::printLevelOrder(Node* root){
+
+	if(root == NULL){
+		return;
+	}
+	std::queue<Node*> q;
+
+	q.push(root);
+	q.push(NULL);
+
+	while(!q.empty()){
+
+		if(q.front() != NULL){
+
+			std::cout << q.front()->getData() << " ";
+
+			if(q.front()->left){
+				q.push(q.front()->left);
+			}
+			if(q.front()->right){
+				q.push(q.front()->right);
+			}
+			
+			q.pop();
+		}
+		else{
+			q.pop();
+			std::cout << std::endl;
+			if(!q.empty()){
+				q.push(NULL);
+			}
+		}		
+
+	}
+
+}
