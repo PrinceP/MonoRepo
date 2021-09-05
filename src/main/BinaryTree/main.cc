@@ -23,6 +23,10 @@ int main(int argc, char** argv){
 
     std::cout << "Print levelorder input" << std::endl;
     greet->printLevelOrder(root);
+
+    std::cout << "Height ";
+    std::cout << greet->getHeight(root) << std::endl;;
+
     
     std::cout << "Take level order input" << std::endl;
     Node* root2 = greet->parseLevelOrder();
@@ -30,6 +34,8 @@ int main(int argc, char** argv){
     std::cout << "Print levelorder input" << std::endl;
     greet->printLevelOrder(root2);
     
+    std::cout << "Height ";
+    std::cout << greet->getHeight(root2) << std::endl;
     
 
     return EXIT_SUCCESS;

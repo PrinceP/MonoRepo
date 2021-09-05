@@ -123,3 +123,17 @@ Node* BinaryTree::parseLevelOrder(){
 
 	return root;
 }
+
+
+int BinaryTree::getHeight(Node* root){
+	if(root == NULL){
+		return 0;
+	}
+	int h1 = getHeight(root->left);
+
+	int h2 = getHeight(root->right);
+
+	return 1+std::max(h1,h2);
+	 
+}
+

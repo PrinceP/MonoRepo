@@ -30,7 +30,7 @@ class BinaryTree {
         void printInOrder(Node* root);
         void printPostOrder(Node* root);
         void printLevelOrder(Node* root);
-        
+        int getHeight(Node* root);
 };
 
 #endif
