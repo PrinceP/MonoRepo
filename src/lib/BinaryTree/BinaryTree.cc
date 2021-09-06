@@ -137,3 +137,51 @@ int BinaryTree::getHeight(Node* root){
 	 
 }
 
+
+std::vector<int> BinaryTree::printKthLevel(Node* root, int k){
+    
+    std::vector<int> result;
+    
+    if(k == 0){
+        result.push_back(root->getData());
+		std::cout << root->getData() << " ";
+        return result;
+    }
+    
+    std::queue<Node*> q;
+    
+    q.push(root);
+    q.push(NULL);
+    
+    int i = 0;
+    
+    while(!q.empty()){
+        
+        if(q.front() == NULL){
+            q.pop();
+            i++;
+            if(!q.empty()){
+                q.push(NULL);
+            }
+            
+        }
+        else{
+            Node* n = q.front();
+            if(i==k){
+                result.push_back(n->getData());
+				std::cout << n->getData() << " ";
+            }
+            q.pop();
+            if(n->left){
+                q.push(n->left);
+            }
+            if(n->right){
+                q.push(n->right);    
+            }
+            
+        }
+        
+        
+    }
+    return result;  
+}

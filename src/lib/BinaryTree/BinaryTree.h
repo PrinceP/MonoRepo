@@ -31,6 +31,7 @@ class BinaryTree {
         void printPostOrder(Node* root);
         void printLevelOrder(Node* root);
         int getHeight(Node* root);
+        std::vector<int> printKthLevel(Node* root, int k);
 };
 
 #endif

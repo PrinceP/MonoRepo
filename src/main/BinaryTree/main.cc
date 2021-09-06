@@ -33,6 +33,10 @@ int main(int argc, char** argv){
     
     std::cout << "Print levelorder input" << std::endl;
     greet->printLevelOrder(root2);
+
+    std::cout << "Print the level 2 " << std::endl;
+    greet->printKthLevel(root2, 2);
+    std::cout << std::endl;
     
     std::cout << "Height ";
     std::cout << greet->getHeight(root2) << std::endl;
