@@ -137,6 +137,19 @@ int BinaryTree::getHeight(Node* root){
 	 
 }
 
+int BinaryTree::getDiameter(Node* root){
+	if(root == NULL){
+		return 0;
+	}
+
+	int D1 = getHeight(root->left) + getHeight(root->right) ;
+	int D2 = getDiameter(root->left);
+	int D3 = getDiameter(root->right);
+
+	return std::max(D1, std::max(D2,D3));
+	 
+}
+
 int BinaryTree::getSum(Node* root){
 	if(root == NULL){
 		return 0;

@@ -30,7 +30,9 @@ int main(int argc, char** argv){
     std::cout << "Sum ";
     std::cout << greet->getSum(root) << std::endl;
 
-    
+    std::cout << "Diameter ";
+    std::cout << greet->getDiameter(root) << std::endl;
+
 
     
     std::cout << "Take level order input" << std::endl;
@@ -45,6 +47,10 @@ int main(int argc, char** argv){
     
     std::cout << "Height ";
     std::cout << greet->getHeight(root2) << std::endl;
+
+    std::cout << "Diameter ";
+    std::cout << greet->getDiameter(root2) << std::endl;
+
     
 
     return EXIT_SUCCESS;
