@@ -137,6 +137,17 @@ int BinaryTree::getHeight(Node* root){
 	 
 }
 
+int BinaryTree::getSum(Node* root){
+	if(root == NULL){
+		return 0;
+	}
+	int s1 = getSum(root->left);
+
+	int s2 = getSum(root->right);
+
+	return root->getData()+ s1 + s2;
+	 
+}
 
 std::vector<int> BinaryTree::printKthLevel(Node* root, int k){
     

@@ -30,8 +30,9 @@ class BinaryTree {
         void printInOrder(Node* root);
         void printPostOrder(Node* root);
         void printLevelOrder(Node* root);
-        int getHeight(Node* root);
         std::vector<int> printKthLevel(Node* root, int k);
+        int getHeight(Node* root);
+        int getSum(Node* root);
 };
 
 #endif

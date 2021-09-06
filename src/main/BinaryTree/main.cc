@@ -25,7 +25,12 @@ int main(int argc, char** argv){
     greet->printLevelOrder(root);
 
     std::cout << "Height ";
-    std::cout << greet->getHeight(root) << std::endl;;
+    std::cout << greet->getHeight(root) << std::endl;
+
+    std::cout << "Sum ";
+    std::cout << greet->getSum(root) << std::endl;
+
+    
 
     
     std::cout << "Take level order input" << std::endl;
