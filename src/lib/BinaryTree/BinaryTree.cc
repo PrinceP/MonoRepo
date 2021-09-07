@@ -220,3 +220,24 @@ std::vector<int> BinaryTree::printKthLevel(Node* root, int k){
     }
     return result;  
 }
+
+
+bool isMirror(Node* root1, Node* root2){
+    if(root1 == NULL && root2 == NULL){
+        return true;
+    }
+    else if(root1 == NULL || root2 == NULL){
+        return false;
+    }
+    else 
+    return (root1->getData() == root2->getData() && isMirror(root1->left, root2->right) && isMirror(root1->right, root2->left));
+
+}
+
+bool isSymmetric(Node* root) {
+    if(root == NULL){
+        return true;
+    }
+    
+    return isMirror(root->left, root->right);
+}
