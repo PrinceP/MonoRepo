@@ -33,6 +33,7 @@ class BinaryTree {
         std::vector<int> printKthLevel(Node* root, int k);
         int getHeight(Node* root);
         int getDiameter(Node* root);
+        int getminDepth(Node *root);
         int getSum(Node* root);
 };
 

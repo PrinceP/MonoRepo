@@ -33,6 +33,8 @@ int main(int argc, char** argv){
     std::cout << "Diameter ";
     std::cout << greet->getDiameter(root) << std::endl;
 
+    std::cout << "Min depth ";
+    std::cout << greet->getminDepth(root) << std::endl;
 
     
     std::cout << "Take level order input" << std::endl;
@@ -50,6 +52,9 @@ int main(int argc, char** argv){
 
     std::cout << "Diameter ";
     std::cout << greet->getDiameter(root2) << std::endl;
+
+    std::cout << "Min depth ";
+    std::cout << greet->getminDepth(root2) << std::endl;
 
     
 

@@ -137,6 +137,17 @@ int BinaryTree::getHeight(Node* root){
 	 
 }
 
+int BinaryTree::getminDepth(Node *root) {
+    if(root == NULL){
+        return 0;
+    }
+    int d1 = getminDepth(root->left);
+    int d2 = getminDepth(root->right);
+    
+    return 1 + std::min(d1,d2);
+    
+}
+
 int BinaryTree::getDiameter(Node* root){
 	if(root == NULL){
 		return 0;
