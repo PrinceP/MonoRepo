@@ -241,3 +241,33 @@ bool isSymmetric(Node* root) {
     
     return isMirror(root->left, root->right);
 }
+
+int evalTree(Node* root){
+    
+    // empty tree 
+    if (!root) 
+        return 0; 
+  
+    // leaf node i.e, an integer 
+    if (!root->left && !root->right) 
+        return  root->getData();//stoi(root->getData()); 
+  
+    // Evaluate left subtree 
+    int l_val = evalTree(root->left); 
+  
+    // Evaluate right subtree 
+    int r_val = evalTree(root->right); 
+  
+    // Check which operator to apply 
+    if (root->getData()==1) 
+        return l_val+r_val; 
+  
+    if (root->getData()==2) 
+        return l_val-r_val; 
+  
+    if (root->getData()==3) 
+        return l_val*r_val; 
+  
+    return l_val/r_val; 
+    
+}

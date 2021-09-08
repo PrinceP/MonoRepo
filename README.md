@@ -21,7 +21,7 @@
 | Linked List | C++ | LinkedList |test_LinkedList|Reverse, Delete, Delete tail, Delete Klast|
 | Stacks | C++ | Stacks |test_Stacks|Insert At bottom, reverse, StockSpan, https://www.geeksforgeeks.org/next-greater-element/ , https://www.geeksforgeeks.org/find-expression-duplicate-parenthesis-not/, https://www.geeksforgeeks.org/largest-rectangle-under-histogram/ |
 | Queue | C++ | Queue |test_Queue|Circular array, Stack using Queue, First Non-Repeating char, Alternate queue|
-| BinaryTree | C++ | BinaryTree |test_BinaryTree|Preorder, Inorder, Postorder, Levelorder, ParseLevelOrder, height, KthLevel, Sum, Diameter, minDepth, isSymmetric|
+| BinaryTree | C++ | BinaryTree |test_BinaryTree|Preorder, Inorder, Postorder, Levelorder, ParseLevelOrder, height, KthLevel, Sum, Diameter, minDepth, isSymmetric, EvalTree|
 
 ### OPENCV
 
