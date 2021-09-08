@@ -295,3 +295,47 @@ Node* removeHN(Node* root){
     }
     return root;
 }
+
+void findPath(Node* root, int targetSum, int currentSum, std::vector<std::vector<int>> &result, std::vector<int> &oneresult){
+    
+    if(root == NULL){
+        return;
+    }
+    
+    if(root->left == NULL && root->right == NULL){
+        
+        if(targetSum == (currentSum + root->getData())){
+            
+            oneresult.push_back(root->getData());
+            result.push_back(oneresult);
+            oneresult.pop_back();
+        }
+        return;
+    }
+    
+    if(root->left != NULL){
+        oneresult.push_back(root->getData());
+        findPath(root->left, targetSum, currentSum + root->getData(), result, oneresult);
+        oneresult.pop_back();
+    }
+    
+    if(root->right != NULL){
+        oneresult.push_back(root->getData());
+        findPath(root->right, targetSum, currentSum + root->getData(), result, oneresult);
+        oneresult.pop_back();
+    }
+    
+    
+}
+
+std::vector<std::vector<int>> pathSum(Node* root, int targetSum){
+    // your code goes here
+    std::vector<std::vector<int>> result;
+    std::vector<int> oneresult;
+    int currentSum = 0;
+    
+    findPath(root, targetSum, currentSum, result, oneresult);
+    
+    return result;
+    
+}
