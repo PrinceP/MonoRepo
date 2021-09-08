@@ -271,3 +271,27 @@ int evalTree(Node* root){
     return l_val/r_val; 
     
 }
+
+Node* removeHN(Node* root){
+    
+    if(root == NULL){
+        return NULL;
+    }
+    
+    root->left = removeHN(root->left);
+    root->right = removeHN(root->right);
+    
+    if (root->left==NULL && root->right==NULL)
+        return root;
+    if(root->left == NULL){
+        Node* new_root = root->right;
+        free(root);
+        return new_root;
+    }
+    if(root->right == NULL){
+        Node* new_root = root->left;
+        free(root);
+        return new_root;
+    }
+    return root;
+}
