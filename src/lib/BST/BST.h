@@ -16,6 +16,8 @@ class BST {
     public:
         std::string getBSTMessage();
         Node* insertInBST(Node* root, int data);
+        bool findInBST(Node* root, int data);
+        
         void printInorderBST(Node* root);
 };
 

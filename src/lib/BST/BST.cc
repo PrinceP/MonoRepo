@@ -28,3 +28,20 @@ Node* BST::insertInBST(Node* root, int data){
 
 	return root;
 }
+
+
+bool BST::findInBST(Node* root, int data){
+
+	if(root == NULL){
+		return false;
+	}
+	if(root->key == data){
+		return true;
+	}
+
+	if(root->key > data){
+		return findInBST(root->left, data);
+	}else{
+		return findInBST(root->right, data);
+	}
+}

@@ -12,8 +12,10 @@ int main(int argc, char** argv){
     for(int i: arr){
         root = bst->insertInBST(root, i);
     }
-
     bst->printInorderBST(root);
+
+    std::cout << std::endl;
+    std::cout << "Find 1 in the BST: " << greet->findInBST(root, 1) << std::endl;
 
 
     return EXIT_SUCCESS;
