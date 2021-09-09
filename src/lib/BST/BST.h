@@ -20,6 +20,8 @@ class BST {
         bool findInBST(Node* root, int data);
         
         void printInorderBST(Node* root);
+        void printInRangeBST(Node* root, int key1, int key2);
+        
 };
 
 #endif

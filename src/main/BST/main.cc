@@ -22,6 +22,8 @@ int main(int argc, char** argv){
     bst->printInorderBST(root);
     std::cout << std::endl;
 
+    bst->printInRangeBST(root, 4, 18);
+
     
     return EXIT_SUCCESS;
 

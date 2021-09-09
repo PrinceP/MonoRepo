@@ -13,6 +13,24 @@ void BST::printInorderBST(Node* root){
 	}
 }
 
+void BST::printInRangeBST(Node* root, int key1, int key2){
+
+	if(root != NULL){
+		if(root->key >= key1 && root->key <= key2){
+			printInRangeBST(root->left, key1, key2);
+			std::cout << root->key << " ";
+			printInRangeBST(root->right, key1, key2);
+		}
+		else if(root->key < key1){
+			printInRangeBST(root->right, key1, key2);
+		}
+		else {
+			//root->key > key2
+			printInRangeBST(root->left, key1, key2);
+		}
+
+		}
+}
 
 Node* BST::insertInBST(Node* root, int data){
 
