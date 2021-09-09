@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include <vector>
 
 class Node{
     public:
@@ -21,7 +22,7 @@ class BST {
         
         void printInorderBST(Node* root);
         void printInRangeBST(Node* root, int key1, int key2);
-        
+        void printRoot2LeafBST(Node* root, std::vector<int> &path);
 };
 
 #endif

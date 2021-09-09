@@ -8,7 +8,7 @@ int main(int argc, char** argv){
     BST *bst = new BST();
     Node* root = NULL;
 
-    int arr[] = {2, 3, 4, 7, 10, 8, 18, 1};
+    int arr[] = {4, 2, 3, 10, 8, 7, 18, 1};
     for(int i: arr){
         root = bst->insertInBST(root, i);
     }
@@ -22,8 +22,16 @@ int main(int argc, char** argv){
     bst->printInorderBST(root);
     std::cout << std::endl;
 
+    std::cout <<"In Range from 4 to 18" << std::endl;
+
     bst->printInRangeBST(root, 4, 18);
 
+    std::cout << std::endl;
+
+    std::cout <<"Root to Leaf Paths" << std::endl;
+
+    std::vector<int> path;
+    bst->printRoot2LeafBST(root, path);
     
     return EXIT_SUCCESS;
 

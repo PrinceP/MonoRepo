@@ -108,3 +108,26 @@ Node* BST::deleteInBST(Node* root, int data){
 	}
 	return root;
 }
+
+void BST::printRoot2LeafBST(Node* root, std::vector<int> &path){
+
+	if(root == NULL){
+		return;
+	}
+
+	if(root->left == NULL && root->right == NULL){
+
+		for(int x: path){
+			std::cout<< x << " ";
+		}
+		std::cout<<root->key<<std::endl;
+		return;
+	}
+
+	path.push_back(root->key);
+	printRoot2LeafBST(root->left, path);
+	printRoot2LeafBST(root->right, path);
+	path.pop_back();
+
+}
+
