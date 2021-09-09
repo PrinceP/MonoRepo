@@ -17,7 +17,12 @@ int main(int argc, char** argv){
     std::cout << std::endl;
     std::cout << "Find 1 in the BST: " << greet->findInBST(root, 1) << std::endl;
 
+    std::cout << "Delete 1 in the BST: ";
+    root = greet->deleteInBST(root, 1);
+    bst->printInorderBST(root);
+    std::cout << std::endl;
 
+    
     return EXIT_SUCCESS;
 
 }

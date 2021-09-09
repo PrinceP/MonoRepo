@@ -45,3 +45,48 @@ bool BST::findInBST(Node* root, int data){
 		return findInBST(root->right, data);
 	}
 }
+
+Node* findMin(Node* root){
+
+	while(root->left != NULL){
+		root = root->left;
+	}
+	return root;
+
+}
+
+Node* BST::deleteInBST(Node* root, int data){
+
+	if(root == NULL){
+		return NULL;
+	}
+
+	if(root->key > data){
+		root->left = deleteInBST(root->left, data);
+	}else{
+		root->right = deleteInBST(root->right, data);
+	}
+
+	if(root->key == data){
+		if(root->left == NULL && root->right == NULL){
+			delete root;
+			root = NULL;
+		}
+		else if(root->left == NULL){
+			Node* temp = root;
+			root = root->right;
+			delete temp;
+		}
+		else if(root->right == NULL){
+			Node* temp = root;
+			root = root->left;
+			delete temp;
+		}
+		else{
+			Node* temp = findMin(root->right);
+			root->key = temp->key;
+			root->right = deleteInBST(root->right,temp->key);
+		}
+	}
+	return root;
+}
