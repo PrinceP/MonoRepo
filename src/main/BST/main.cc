@@ -32,7 +32,11 @@ int main(int argc, char** argv){
 
     std::vector<int> path;
     bst->printRoot2LeafBST(root, path);
-    
+
+    std::cout <<"Is BST ";
+    std::cout << bst->IsBST(root);
+
+
     return EXIT_SUCCESS;
 
 }

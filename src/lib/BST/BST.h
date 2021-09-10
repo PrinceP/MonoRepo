@@ -19,7 +19,9 @@ class BST {
         Node* insertInBST(Node* root, int data);
         Node* deleteInBST(Node* root, int data);
         bool findInBST(Node* root, int data);
+        bool IsBST(Node* root);
         
+
         void printInorderBST(Node* root);
         void printInRangeBST(Node* root, int key1, int key2);
         void printRoot2LeafBST(Node* root, std::vector<int> &path);

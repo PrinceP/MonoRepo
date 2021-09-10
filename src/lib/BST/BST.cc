@@ -13,6 +13,31 @@ void BST::printInorderBST(Node* root){
 	}
 }
 
+bool isBSTutil(Node* root, Node* &prev){
+	if(root != NULL){
+		
+		if(!isBSTutil(root->left, prev)){
+			return false;
+		}
+
+		if(prev != NULL && root->key < prev->key){
+			return false;
+		}
+		prev = root;
+		
+		return isBSTutil(root->right, prev);
+	}
+	return true;
+} 
+
+bool BST::IsBST(Node* root){
+
+	Node* prev = NULL;
+	return isBSTutil(root, prev);
+}
+
+
+
 void BST::printInRangeBST(Node* root, int key1, int key2){
 
 	if(root != NULL){
