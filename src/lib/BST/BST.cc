@@ -37,6 +37,29 @@ bool BST::IsBST(Node* root){
 }
 
 
+Node* BST::mirrorBST(Node * root){
+    //complete this method
+    
+    if (root == NULL)
+        return NULL;
+    else
+    {
+        Node* temp;
+         
+        /* do the subtrees */
+        mirrorBST(root->left);
+        mirrorBST(root->right);
+     
+        /* swap the pointers in this node */
+        temp = root->left;
+        root->left = root->right;
+        root->right = temp;
+    }
+    
+    return root;
+}
+
+
 
 void BST::printInRangeBST(Node* root, int key1, int key2){
 

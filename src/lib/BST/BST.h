@@ -20,7 +20,7 @@ class BST {
         Node* deleteInBST(Node* root, int data);
         bool findInBST(Node* root, int data);
         bool IsBST(Node* root);
-        
+        Node* mirrorBST(Node * root);
 
         void printInorderBST(Node* root);
         void printInRangeBST(Node* root, int key1, int key2);
