@@ -10,6 +10,21 @@ class Compare{
 
 };
 
+int maxProduct(std::vector<int> nums) {
+    // your code goes here
+    std::priority_queue<int> pq;
+    
+    for(int x: nums){
+        pq.push(x);
+    }
+    int first = pq.top() - 1 ;
+    pq.pop();
+    int second = pq.top() - 1;
+    return first*second;
+    
+}
+
+
 int main(int argc, char** argv){
     Heap *greet = new Heap();
     std::cout << greet->getHeapMessage() << std::endl;
