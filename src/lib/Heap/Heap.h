@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 #include <queue>
-
+#include <algorithm>
 class Heap {
 
     std::vector<int> heap_vec;
