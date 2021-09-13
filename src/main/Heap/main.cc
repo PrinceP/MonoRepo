@@ -141,10 +141,45 @@ std::vector<int> kWeakestRows(std::vector<std::vector<int>>& mat, int k) {
     return result_vec;
 }
 
-
-
 //
 
+
+//ScoreMedal
+std::vector<std::string> findRelativeRanks(std::vector<int>& score) {
+    // your code goes here
+    std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, std::less< std::pair<int,int> > > scores;
+    for(int i = 0; i < score.size(); i++){
+        scores.push(std::make_pair(score[i], i));
+    }
+
+    std::vector<std::string> result(score.size());
+    
+    int i = 1;
+    while(!scores.empty()){
+
+        std::pair<int, int> currentScore= scores.top();
+
+
+        if(i == 1){
+            result[currentScore.second] = "Gold Medal";
+        }
+        else if(i == 2){
+            result[currentScore.second] = "Silver Medal";
+        }
+        else if(i == 3){
+            result[currentScore.second] = "Bronze Medal";
+        }
+        else{
+            result[currentScore.second] = std::to_string(i);
+        }
+
+        i++;
+        scores.pop();
+    }
+    return result;
+    
+}
+//
 
 int main(int argc, char** argv){
     Heap *greet = new Heap();
