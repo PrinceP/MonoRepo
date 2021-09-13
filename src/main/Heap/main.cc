@@ -81,6 +81,39 @@ void printKNearCars(std::vector<Car> cars, int k){
 
 //
 
+// Min set size
+int minSetSize(std::vector<int>& arr) {
+    // your code goes here
+    //Mapping each freq
+    std::unordered_map<int, int> countOfElements;
+    for(int i = 0; i < arr.size(); i++){
+        countOfElements[arr[i]]++;
+    }
+    //Build a priority queue
+    std::priority_queue<int> topMax;
+
+    for(auto element: countOfElements){
+        topMax.push(element.second);
+    }
+
+    //Pop from queue and maintain count
+    int count = 0;
+    int sum = 0;
+
+    while(arr.size() - sum > (arr.size()/2)){
+        count++;
+
+        sum+= topMax.top();
+        topMax.pop();
+    }
+
+    return count;
+}
+
+//
+
+
+
 int main(int argc, char** argv){
     Heap *greet = new Heap();
     std::cout << greet->getHeapMessage() << std::endl;

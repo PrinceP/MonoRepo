@@ -5,6 +5,7 @@
 #include <vector>
 #include <queue>
 #include <algorithm>
+#include <unordered_map>
 class Heap {
 
     std::vector<int> heap_vec;
