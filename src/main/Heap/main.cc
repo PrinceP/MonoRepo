@@ -114,6 +114,38 @@ int minSetSize(std::vector<int>& arr) {
 
 
 
+//kWeakestRows
+std::vector<int> kWeakestRows(std::vector<std::vector<int>>& mat, int k) {
+    // your code goes here 
+
+    std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, std::greater< std::pair<int, int> >> pqueue;
+    //greater<type> -> minHeap
+
+    for(int i = 0; i<mat.size(); i++){
+        int soldiers = 0;
+        for(int j = 0 ; j<mat[i].size(); j++){
+            soldiers+= mat[i][j];
+        }
+        pqueue.push(std::make_pair(soldiers, i));
+    }
+
+    std::vector<int> result_vec;
+
+    while(k>0){
+        k--;
+        std::pair<int, int> temp = pqueue.top();
+        result_vec.push_back(temp.second);
+        pqueue.pop();
+    }
+
+    return result_vec;
+}
+
+
+
+//
+
+
 int main(int argc, char** argv){
     Heap *greet = new Heap();
     std::cout << greet->getHeapMessage() << std::endl;
