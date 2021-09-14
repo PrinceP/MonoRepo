@@ -24,6 +24,7 @@
 | BinaryTree | C++ | BinaryTree |test_BinaryTree|Preorder, Inorder, Postorder, Levelorder, ParseLevelOrder, height, KthLevel, Sum, Diameter, minDepth, isSymmetric, EvalTree, RemoveHalfNodes, Root_to_LeafPathSum|
 | BST | C++ | BST |test_BST|Insert, Search, Delete, PrintRange, Print2Leaf, IsBST, DoMirror|
 | Heap | C++ | Heap |test_Heap|Insert, Pop, NearestKObjects, kWeakestRows, minSetSize|
+| Hashing | C++ | Hashing |test_Hashing||
 
 
 
