@@ -1,5 +1,6 @@
 #include "Hashing.h"
 
-std::string Hashing::getHashingMessage(){
-	return "Hello World!";
-}
+// template<typename T>
+// std::string Hashing<T>::getHashingMessage(){
+// 	return "Hello World!";
+// }

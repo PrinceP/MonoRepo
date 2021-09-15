@@ -24,7 +24,7 @@ class Hashing {
     int ts;
 
     void rehash(){
-        
+
     }
 
     public:
@@ -63,7 +63,9 @@ class Hashing {
             }
         }
 
-        std::string getHashingMessage();
+        std::string getHashingMessage(){
+            return "Hello World!";
+        }
 };
 
 #endif
