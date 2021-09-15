@@ -2,12 +2,12 @@
 #define TEMPLATE_GREETING_H
 
 #include <string>
-
+#include <iostream>
 template<typename T> 
 class Node{
     public:
     std::string key;
-    T data;
+    T value;
     Node* next;
     Node(std::string key, T value){
         this->key = key;
@@ -34,6 +34,7 @@ class Hashing {
 
         //increase the size and intialize 
         ts = 2*ts + 1;
+        cs = 0;
         table = new Node<T> *[ts];
         for(int i = 0; i < ts; i++){
              table[i] = NULL;
@@ -76,7 +77,7 @@ class Hashing {
             return idx;
         }
 
-        Hashing(int default_size = 10){
+        Hashing(int default_size = 5){
             cs = 0;
             ts = default_size;
             table = new Node<T> *[ts];
@@ -101,6 +102,18 @@ class Hashing {
 
         std::string getHashingMessage(){
             return "Hello World!";
+        }
+
+        void print(){
+            for(int i = 0; i<ts; i++){
+                std::cout << "Bucket "<<i<<std::endl;
+                Node<T> *temp = table[i];
+                while(temp != NULL){
+                    std::cout << temp->key << "->";
+                    temp = temp->next;
+                }
+                std::cout << std::endl;
+            }
         }
 };
 
