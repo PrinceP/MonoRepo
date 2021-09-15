@@ -14,6 +14,10 @@ class Node{
         this->value = value;
         next = NULL;
     }
+    ~Node(){
+        if(next != NULL)
+            delete next;
+    }
 };
 
 template<typename T>
@@ -24,6 +28,38 @@ class Hashing {
     int ts;
 
     void rehash(){
+        //save old ptr to table
+        Node<T> **oldTable = table;
+        int oldTs = ts;
+
+        //increase the size and intialize 
+        ts = 2*ts + 1;
+        table = new Node<T> *[ts];
+        for(int i = 0; i < ts; i++){
+             table[i] = NULL;
+        }
+        
+        //copy all elements to new table
+        for(int i = 0; i < oldTs; i++){
+
+            Node<T> *temp = oldTable[i];
+            while(temp!=NULL){
+                std::string key = temp->key;
+                T value = temp->value;
+
+                //insert at new table 
+                insert(key, value);
+                temp=temp->next;
+            }
+
+            //destroy old table
+            if(oldTable[i] != NULL){
+                delete oldTable[i];
+            }
+        }
+
+        delete[] oldTable;
+
 
     }
 
