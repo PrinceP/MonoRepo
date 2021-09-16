@@ -115,6 +115,19 @@ class Hashing {
                 std::cout << std::endl;
             }
         }
+
+        T* search(std::string key){
+            int idx = hashFn(key);
+
+            Node<T> *temp = table[idx];
+            while(temp != NULL){
+                if(temp->key == key){
+                    return &temp->value;
+                }
+                temp = temp->next;
+            }
+            return NULL;
+        }
 };
 
 #endif

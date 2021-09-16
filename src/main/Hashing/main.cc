@@ -11,6 +11,8 @@ int main(int argc, char** argv){
     greet->insert("Kamalakam", 20);
     greet->print();
     
+    std::cout << "Price of Mango is "<< *greet->search("Mango") << std::endl;
+    
     return EXIT_SUCCESS;
 
 }
