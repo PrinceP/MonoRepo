@@ -128,6 +128,17 @@ class Hashing {
             }
             return NULL;
         }
+
+        T& operator[](std::string key){
+            
+            T* value_found = search(key);
+            if(value_found == NULL){
+                T object;
+                insert(key, object);
+                value_found = search(key);
+            }
+            return *value_found;
+        }
 };
 
 #endif
