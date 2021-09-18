@@ -37,6 +37,10 @@ class LinkedList {
             }
         }
 
+        Node* getHead(){
+            return head;
+        }
+
         std::string getLinkedListMessage();
         
         void printLinkedList(){
@@ -129,7 +133,67 @@ class LinkedList {
             tail = temp;
         }
         
+        int kthLastElement(int k){
+           //Complete this function to return kth last element
+            Node* temp1 = head;
+            Node* temp2 = head;
+            while(k--){
+                temp1 = temp1->next;
+            }
+            
+            while(temp1){
+                temp2 = temp2->next;
+                temp1 = temp1->next;
+            }
+            
+            return temp2->getData();
+        }
 
+        void deleteTail(){
+            
+            if (head == NULL)
+                return;
+        
+            if (head->next == NULL) {
+                delete head;
+                return;
+            }
+            
+            Node* temp1 = head;
+            Node* temp2 = head->next;
+            while(temp2->next != NULL){
+                temp1 = temp1->next;
+                temp2 = temp2->next;
+            }
+            
+            temp1->next = NULL;
+            tail = temp1;
+            delete temp2;
+            
+            return;
+        }
+
+         Node* mergeList(Node* root1, Node* root2){
+            Node* p_curr = root1;
+            Node* q_curr = root2;
+            Node* p_next;
+            Node* q_next;
+            
+            while(p_curr != NULL  && q_curr != NULL){
+                
+                p_next = p_curr->next;
+                q_next = q_curr->next;
+
+                q_curr->next = p_next;
+                p_curr->next = q_curr;
+                
+                p_curr = p_next;
+                q_curr = q_next;
+
+            }
+            
+            return p_curr;
+        }
 
 
 };
