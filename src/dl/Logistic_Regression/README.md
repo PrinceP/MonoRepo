@@ -134,12 +134,88 @@ z^{i}&=w^Tx^{i} + b \\
 a^{i}&=\sigma(z^{i})\\
 J +&= - (y^{i} \log(a^{i}) + (1-y^{i}) \log(1 - a^{i}))\\
 dz^{i}&=a^{i}-y^{i}\\
-dw^{1}&=dw^{1}+x^{1}dz^{i}\\
-dw^{2}&=dw^{2}+x^{2}dz^{i}\\
+dw&=dw+x^{1}dz^{1}\\
+dw&=dw+x^{2}dz^{2}\\
+...&=...\\
+dw&=dw+x^{i}dz^{i}\\
+db&=db+dz^{1}\\
+db&=db+dz^{2}\\
 ...&=...\\
 db&=db+dz^{i}\\
 \\
 J = \dfrac{J}{m},dw_{1} = \dfrac{dw_{1}}{m},dw_{2} = \dfrac{dw_{2}}{m}, db = \dfrac{db}{m}\\
 \\
 \end{split}
-$ --> <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/hwhdUZ7aym.svg">
+$ --> <img style="transform: translateY(0.1em); background: white;" src="../../../svg/P10EfxnaO3.svg"> 
+
+----------
+
+### Broadcasting phenomenon
+
+<!-- $
+\big[m, n\big] (+-*/) or  \dfrac{\big[m, 1\big]}{\big[1, ,n\big]} => \dfrac{\big[m, n\big]}{\big[m, ,n\big]} 
+$ --> <img style="transform: translateY(0.1em); background: white;" src="../../../svg/IUTxVCBcwl.svg">
+
+----------
+### Vectorizing the Logistic Regression
+
+
+<!-- $
+\begin{split}
+\\
+X &= \begin{bmatrix}
+| & | & |\\
+X^{1} & X^{2} &... X^{m}\\
+| & | & |\\
+\end{bmatrix}\\
+\\
+X&:\big[n^{x},m\big]\\
+n^{x}&:features\\
+m&:examples\\
+\\
+Given\\
+z^{i}&=w^Tx^{i} + b \\
+a^{i}&=\sigma(z^{i})\\
+\\
+Vectorize:\\
+Forward\\
+\big[z^{1},z^{2}...z^{m}\big]_{[1,m]}&=w^T_{[1,n^x]}X_{[n^x,m]}+\big[b,b,..\big]_{[1,m]}\\
+\\
+\big[a^{1},a^{2}...a^{m}\big]_{[1,m]}&=\sigma(\big[z^{1},z^{2}...z^{m}\big]_{[1,m]})\\
+\\
+Z&=np.dot(w^T,X) + b\\
+A&=\sigma(Z)\\
+\\
+Backward\\
+\\
+dz^{1}&=a^{1}-y^{1}\\
+dz^{2}&=a^{2}-y^{2}\\
+...&=...\\
+dz^{m}&=a^{m}-y^{m}\\
+\\
+A&=\big[a^{1},a^{2}...a^{m}\big]_{[1,m]}\\
+Y&=\big[y^{1},y^{2}...y^{m}\big]_{[1,m]}\\
+dZ&=\big[dz^{1},dz^{2}...dz^{m}\big]_{[1,m]}\\
+dZ&=A-Y\\
+\\
+dw&=dw+X^{1}dz^{i}\\
+dw&=dw+X^{2}dz^{i}\\
+...&=...\\
+dw&=dw+X^{m}dz^{m}\\
+dw&=\dfrac{dw}{m}\\
+\\
+db&=db+dz^{1}\\
+db&=db+dz^{2}\\
+...&=...\\
+db&=db+dz^{m}\\
+db&=\dfrac{db}{m}\\
+\\
+dw&=\dfrac{1}{m}XdZ^T\\\\
+db&=\dfrac{1}{m}np.sum(dZ)\\
+\\
+Update:\\
+w &= w - \alpha . dW\\
+b &= b - \alpha . db\\
+\end{split}
+$ --> <img style="transform: translateY(0.1em); background: white;" src="../../../svg/c8KviIFNCV.svg">
+

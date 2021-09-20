@@ -20,12 +20,20 @@
 | Recursion | C++ | Recursion |test_Recursion|Occurances, Increasing, fastPower, https://www.geeksforgeeks.org/tiling-problem/ ,https://www.geeksforgeeks.org/friends-pairing-problem/, https://www.techiedelight.com/find-n-digit-binary-strings-without-consecutive-1s/ |
 | Linked List | C++ | LinkedList |test_LinkedList|Reverse, Delete, Delete tail, Delete Klast|
 | Stacks | C++ | Stacks |test_Stacks|Insert At bottom, reverse, StockSpan, https://www.geeksforgeeks.org/next-greater-element/ , https://www.geeksforgeeks.org/find-expression-duplicate-parenthesis-not/, https://www.geeksforgeeks.org/largest-rectangle-under-histogram/ |
+| Queue | C++ | Queue |test_Queue|Circular array, Stack using Queue, First Non-Repeating char, Alternate queue|
+| BinaryTree | C++ | BinaryTree |test_BinaryTree|Preorder, Inorder, Postorder, Levelorder, ParseLevelOrder, height, KthLevel, Sum, Diameter, minDepth, isSymmetric, EvalTree, RemoveHalfNodes, Root_to_LeafPathSum|
+| BST | C++ | BST |test_BST|Insert, Search, Delete, PrintRange, Print2Leaf, IsBST, DoMirror|
+| Heap | C++ | Heap |test_Heap|Insert, Pop, NearestKObjects, kWeakestRows, minSetSize|
+| Hashing | C++ | Hashing |test_Hashing|Insert, Search, [] operator|
+
+
 
 ### OPENCV
 
 | Programs |Language|Bazel build|Bazel test|Remarks|
 | ------ | ------ | ------ |------ | ------ |
 | OpenCV_Work | C++ | OpenCV_Work |-||
+| PipeCounter | Python | bazel-bin/src/main/PipeCounter/counter |-||
 
 ### Tensorflow
 
