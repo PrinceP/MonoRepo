@@ -3,6 +3,9 @@
 
 #include <string>
 #include <iostream>
+#include <vector>
+#include <unordered_map>
+
 template<typename T> 
 class Node{
     public:
