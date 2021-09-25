@@ -27,6 +27,34 @@ std::vector<int> intersection(std::vector<int>& nums1, std::vector<int>& nums2) 
 
 //
 
+//kSumSubArray
+int longestSubarrayKSum(std::vector<int> arr,int k){
+    int n = arr.size();
+	std::unordered_map<int,int> m;
+	int pre = 0;
+
+	int len = 0;
+
+	for(int i=0;i<n;i++){
+		pre += arr[i];
+
+		if(pre==k){
+			len = std::max(len,i+1);
+		}
+
+		if(m.find(pre-k)!=m.end()){
+			len = std::max(len,i - m[pre-k]);
+		}
+		else{
+			//store the first occ
+			m[pre] = i;
+		}
+
+	}
+	return len;
+
+}
+
 
 int main(int argc, char** argv){
     Hashing<int> greet;
