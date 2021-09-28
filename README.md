@@ -25,6 +25,7 @@
 | BST | C++ | BST |test_BST|Insert, Search, Delete, PrintRange, Print2Leaf, IsBST, DoMirror|
 | Heap | C++ | Heap |test_Heap|Insert, Pop, NearestKObjects, kWeakestRows, minSetSize|
 | Hashing | C++ | Hashing |test_Hashing|Insert, Search, [] operator, Array intersection, KSumSubarray|
+| Tries | C++ | Tries |test_Tries|Insert, Search|
 
 
 
