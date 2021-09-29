@@ -26,6 +26,8 @@
 | Heap | C++ | Heap |test_Heap|Insert, Pop, NearestKObjects, kWeakestRows, minSetSize|
 | Hashing | C++ | Hashing |test_Hashing|Insert, Search, [] operator, Array intersection, KSumSubarray|
 | Tries | C++ | Tries |test_Tries|Insert, Search|
+| Graphs | C++ | Graphs |test_Graphs|Insert, Print|
+
 
 
 
