@@ -3,10 +3,11 @@
 
 #include <string>
 
+class Node{
+    
+};
 
 
-
- 
 class Graphs {
     public:
         std::string getGraphsMessage();
