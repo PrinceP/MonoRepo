@@ -1,5 +1,5 @@
 py_binary(
-    name = 'testpolygon',
+    name = 'polygontest',
     main = 'polygontest.py',
     srcs = ['polygontest.py']
 )
