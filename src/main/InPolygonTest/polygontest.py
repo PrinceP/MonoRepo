@@ -9,7 +9,10 @@ image = cv2.resize(image, (640,480))
 int_coords = lambda x: np.array(x).round().astype(np.int32)
 
 
-line1=[100,100,100,200,200,200,200,100]
+line1=[100,200, 100,300, 300,300, 200,200]
+# line1=[100,250, 100,250, 200,300, 200,300]
+
+
 a = np.array(line1).reshape(-1, 2)
 poly1 = Polygon(a).convex_hull 
 print(Polygon(a).convex_hull)
@@ -37,6 +40,7 @@ else:
         print(time.time() - start_time)
         intersect_polygon = [int_coords(intersect.exterior.coords)]
         inter_area = intersect.area #intersection area
+        print("Intersect Area = {} ".format(inter_area))
         iou=float(inter_area)/poly1.area
     except shapely.geos.TopologicalError:
         print('shapely.geos.TopologicalError occured, iou set to 0')
@@ -53,4 +57,4 @@ image = cv2.polylines(image, intersect_polygon,
                       isClosed, (255, 0, 255), 1)
 
 
-cv2.imwrite('/Users/prince/Work/Developer/DS_Algo/src/main/InPolygonTest/output/998d98e.jpg', image)
+cv2.imwrite('/Users/prince/Work/Developer/DS_Algo/src/main/InPolygonTest/output/998d98e_1.jpg', image)
