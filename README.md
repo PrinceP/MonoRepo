@@ -38,14 +38,14 @@
 | OpenCV_Work | C++ | OpenCV_Work |-||
 | PipeCounter | Python | bazel-bin/src/main/PipeCounter/counter |-||
 | InPolygonTest | Python | bazel-bin/src/main/InPolygonTest/polygontest |-||
-### Tensorflow
 
+### Colabs
 | Programs |Language|Bazel build|Bazel test|Remarks|
 | ------ | ------ | ------ |------ | ------ |
 | Repnet Colab | - | - |-|src/colabs/repnet/repnet_colab.ipynb|
 | GAN Colabs | - | - |-|src/colabs/GAN|
 | YOLO Colabs | - | - |-|src/colabs/Yolo|
-
+| DL Frameworks Colabs | - | - |-|src/colabs/assignments|
 ## Commands to help
 
 - Generate a sample project work (BinarySearch) with test and main
