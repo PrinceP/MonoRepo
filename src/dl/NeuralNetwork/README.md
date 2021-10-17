@@ -1,26 +1,30 @@
 # Neural Network
 ## Shallow Neural Network Explained
 <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/DNN.png">
+
 2-layer network is shown above. The input layer is not counted in notation.
 
 <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/DNN1.png">
+
 Each node is form of logistic regression.
 
 <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/DNN2.png">
+
 We introduced a new notation of square brackets to denote layer number with subscript of id's of hidden units.
 
-$
+<!-- $
 \begin{split}
 z^{[1]}_{1} &= w^{[1]T}_{1}x + b^{[1]}_{1}, a^{[1]}_{1} = \sigma(z^{[1]}_{1})\\
 z^{[1]}_{2} &= w^{[1]T}_{2}x + b^{[1]}_{2}, a^{[1]}_{2} = \sigma(z^{[1]}_{2})\\
 z^{[1]}_{3} &= w^{[1]T}_{3}x + b^{[1]}_{3}, a^{[1]}_{3} = \sigma(z^{[1]}_{3})\\
 z^{[1]}_{4} &= w^{[1]T}_{4}x + b^{[1]}_{4}, a^{[1]}_{4} = \sigma(z^{[1]}_{4})\\
 \end{split}
-$
+$ --> <img style="transform: translateY(0.1em); background: white;" src="../../../svg/kFJI4LMe9Q.svg">
 
-$
+
+<!-- $
 Z^{[1]}_{[output,1]} = w^{[1]T}_{[output,input]}x_{[input,1]} + b^{[1]}_{[output,1]}, a^{[1]}_{[output,1]} = \sigma(z^{[1]}_{[output,1]})\\
-$
+$ --> <img style="transform: translateY(0.1em); background: white;" src="../../../svg/MotJO2YnNH.svg">
 
 <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/DNNGD.png">
 
