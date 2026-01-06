@@ -149,22 +149,21 @@ db&=db+dz^{i}\\
 J = \dfrac{J}{m},dw_{1} = \dfrac{dw_{1}}{m},dw_{2} = \dfrac{dw_{2}}{m}, db = \dfrac{db}{m}\\
 \\
 \end{split}
-$$
-
+$ --> <img style="transform: translateY(0.1em); background: white;" src="../../../svg/P10EfxnaO3.svg"> 
 
 ----------
 
 ### Broadcasting phenomenon
 
-$$
-\big[m, n\big] (+-*/)  \dfrac{\big[m, 1\big]}{\big[1, ,n\big]}  : \dfrac{\big[m, n\big]}{\big[m, ,n\big]} 
-$$ 
+<!-- $
+\big[m, n\big] (+-*/) or  \dfrac{\big[m, 1\big]}{\big[1, ,n\big]} => \dfrac{\big[m, n\big]}{\big[m, ,n\big]} 
+$ --> <img style="transform: translateY(0.1em); background: white;" src="../../../svg/IUTxVCBcwl.svg">
 
 ----------
 ### Vectorizing the Logistic Regression
 
 
-$$
+<!-- $
 \begin{split}
 \\
 X &= \begin{bmatrix}
@@ -221,4 +220,5 @@ Update:\\
 w &= w - \alpha . dW\\
 b &= b - \alpha . db\\
 \end{split}
-$$
+$ --> <img style="transform: translateY(0.1em); background: white;" src="../../../svg/c8KviIFNCV.svg">
+

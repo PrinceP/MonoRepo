@@ -40,11 +40,12 @@ a^{[1]} &= \sigma(z^{[1]})\\
 z^{[2]} &= W^{[2]}a^{[1]} + b^{[2]}\\
 a^{[2]} &= \sigma(z^{[2]})\\
 \end{split}
-$$
+$
 
-### Vectorized over m
+### Vectorized over m examples
 
-$$
+
+$
 \begin{split}
 Forward-pass:\\
 for( i = 1 ->  m)\\
@@ -53,12 +54,9 @@ a^{[1](i)} &= \sigma(z^{[1](i)})\\
 z^{[2](i)} &= W^{[2]}a^{[1](i)} + b^{[2]}\\
 a^{[2](i)} &= \sigma(z^{[2](i)})\\
 \end{split}
-$$
+$
 
-----
-### m notations
-
-$$
+$
 \begin{split}
 X &= \begin{bmatrix}
 | & | & |\\
@@ -70,9 +68,9 @@ X&:\big[n^{x},m\big]\\
 n^{x}&:features\\
 m&:examples\\
 \end{split}
-$$
+$
 
-$$
+$
 \begin{split}
 Z^{[1]} &= \begin{bmatrix}
 | & | & |\\
@@ -84,9 +82,9 @@ Z^{[1]}&:\big[n^{x},m\big]\\
 n^{x}&:features\\
 m&:examples\\
 \end{split}
-$$
+$
 
-$$
+$
 \begin{split}
 A^{[1]} &= \begin{bmatrix}
 | & | & |\\
@@ -98,20 +96,19 @@ A^{[1]}&:\big[n^{x},m\big]\\
 n^{x}&:features\\
 m&:examples\\
 \end{split}
-$$
+$
 
-$$
+$
 \begin{split}
 Z^{[1]} &= W^{[1]}x + b^{[1]}\\
 A^{[1]} &= g^{[1]}(z^{[1]})\\
 Z^{[2]} &= W^{[2]}a^{[1]} + b^{[2]}\\
 A^{[2]} &= g^{[2]}(z^{[2]})\\
 \end{split}
-$$
+$
 
-----
 
-$$
+$
 \begin{split}
 Backward - pass:\\
 dZ^{[2]} &= A^{[2]} - Y\\
@@ -126,9 +123,9 @@ Update:\\
 W^{[1]}&=W^{[1]} - \alpha . dW^{[1]}\\
 b^{[1]}&=b^{[1]} - \alpha . db^{[1]}\\
 \end{split}
-$$
+$
 
------
+
 
 
 ## Deep Neural Network Explained
@@ -138,18 +135,17 @@ Vectorized Implementation for a deep layer network:
 <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/DNN3.png">
 
 
-$$
+$
 \begin{split}
 Matrix-check\\
 l &: layer\\
 m &: examples\\
 Z^{[l]}_{[output,m]} &= W^{[l]T}_{[output,input]}X_{[input,m]} + b^{[l]}_{[output,m]}\\
 \end{split}
-$$
-
+$
 <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/DNN4.jpg">
 
-$$
+$
 \begin{split}
 \\
 Forward&:\\
@@ -160,9 +156,9 @@ Output&:a^{[l]}, Cache(z^{[l]})\\
 Z^{[l]}_{[output,m]} &= W^{[l]T}_{[output,input]}A_{[input,m]} + b^{[l]}_{[output,m]}\\
 A^{[l]}_{[output,m]} &= g^{[l]}(Z^{[l]}_{[output,m]})\\
 \end{split}
-$$
+$
 
-$$
+$
 \begin{split}
 \\
 Backward&:\\
@@ -176,4 +172,4 @@ db^{[l]}&=\dfrac{1}{m}np.sum(dZ^{[l]}, axis=1, keepdims=True)\\
 dA^{[l-1]}&=W^{[l]T}dZ^{[l]}\\
 \\
 \end{split}
-$$
+$
