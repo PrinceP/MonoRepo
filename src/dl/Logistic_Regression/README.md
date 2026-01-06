@@ -1,52 +1,53 @@
 ## Logistic Regression Explained
 ----------------
 Binary Classification problem, where the output is either 0 or 1
+Denoted by the following equation
 
-Denoted by following equation
-
-<!-- $\hat{y} = \sigma(w^Tx + b)$ --> <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/w8QE1nMA8S.svg">
+$ \hat{y} = \sigma(w^Tx + b) $ 
 ----------------
 where 
 
 Input
 
-> <!-- $x$ --> <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/rlLHXeFd6j.svg">
+> $x$ 
 
 Sigmoid function    
 
-> <!-- $\sigma(z) = \dfrac{1}{1+e^{-z}}$ --> <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/h9OBEusNBn.svg">
+> $\sigma(z) = \dfrac{1}{1+e^{-z}}$ 
 
 Prediction  
 
-> <!-- $\hat{y}$ --> <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/yvWWJ38wuY.svg">
+> $\hat{y}$ 
 
 Weights and bias
 
-> <!-- $w$ --> <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/b82zyaWpZ8.svg"> , <!-- $b$ --> <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/EL868hFGeq.svg"> 
+> $w$ , $b$
 
 ---------------
 
 Loss (error) function
 
-<!-- $L(\hat{y}, y) = - (y \log(\hat{y}) + (1-y) \log(1 - \hat{y}))$ --> <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/ZCewfelmlr.svg">
+$L(\hat{y}, y) = - (y \log(\hat{y}) + (1-y) \log(1 - \hat{y}))$ 
+
 ---------------
 Cost function
 
-<!-- $J(w, b) = \dfrac{1}{m} \sum_{i=1}^{m} L(\hat{y}^i, y^i) $ --> <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/SFn3rq9r7c.svg">
+$J(w, b) = \dfrac{1}{m} \sum_{i=1}^{m} L(\hat{y}^i, y^i) $ 
+
 ---------------
 Gradient Descent
 
 > Repeat 
 >    
-> <!-- $w = w - \alpha \dfrac{d J(w)}{dw} $ --> <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/2z2rnFbZaT.svg">
+> $w = w - \alpha \dfrac{d J(w)}{dw} $ 
 where learning rate is alpha
 
 ### Sigmoid Derivative
 
-The output from sigmoid function is always from 0 to 1. As the value of input(z) increases the output value is closer to 1 and vice versa.
-Lets find the derivative for this 
+The output from the sigmoid function is always from 0 to 1. As the value of input(z) increases the output value is closer to 1 and vice versa.
+Let's find the derivative for this 
 
-<!-- $
+$
 \begin{equation}
 \begin{split}
 \sigma(z) & = \dfrac{1}{1+e^{-z}} \\
@@ -67,7 +68,7 @@ Simplifying\\
 & = \sigma(z).(1 - \sigma(z))\\
 \end{split}
 \end{equation}
-$ --> <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/58bzxjY8rU.svg">
+$ 
 
 > Reciprocal [rule](https://www.youtube.com/watch?v=jFJ1kgzDuWY)
 
@@ -80,7 +81,7 @@ $ --> <img style="transform: translateY(0.1em); background: gray;" src="../../..
 
 <img src="../../../svg/LRD.png">
 
-<!-- $
+$$
 \begin{split}
 Step - 1:
 \dfrac{dL}{da}\\
@@ -91,11 +92,12 @@ dL(a, y) & = - (y . \dfrac{1}{a} + (1-y) . \dfrac{1}{1-a} . -1) \\
 \\
 dL(a, y) & = \dfrac{a-y}{a(1-a)} \\
 \end{split}
-$ --> <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/tUDP3kH2cr.svg">
+$$
+
 
 --------
 
-<!-- $
+$$
 \begin{split}
 Step - 2:
 \dfrac{da}{dz}\\
@@ -105,11 +107,11 @@ Applying - Sigmoid\\
 \dfrac{da}{dz} & = a.(1 - a) \\
 \\
 \end{split}
-$ --> <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/07rDP7gfL8.svg">
+$$ 
 
 ---------
 
-<!-- $
+$$
 \begin{split}
 Step - 3:
 \dfrac{dL}{dz}\\
@@ -120,13 +122,14 @@ Applying - Chain -Rule\\
 & = a-y
 \\
 \end{split}
-$ --> <img style="transform: translateY(0.1em); background: gray;" src="../../../svg/qEOCfQA8M8.svg">
+$$ 
+
 
 ----------
 
 ### Implementing over m examples
 
-<!-- $
+$$
 \begin{split}
 J =0, dw_1=0, dw_2=0, ..., db = 0\\
 for: i=1 -> m\\

@@ -1,6 +1,55 @@
 #include <iostream>
 #include "src/lib/Queue/Queue.h"
 
+std::vector<char> firstnonrepeating(std::vector<char> str){
+    std::queue<char> q;
+    std::vector<char> result;
+    char char_hash[256] = {0};
+    
+    for(int i = 0; i < str.size(); i++){
+        
+        q.push(str[i]);
+        char_hash[str[i] - 'a']++;
+        
+        while(!q.empty()){
+            
+            if(char_hash[q.front() - 'a'] > 1){
+                q.pop();
+            }
+            else{
+                result.push_back(q.front());
+                break;
+            }
+            
+        }
+        if (q.empty())
+            result.push_back('0');
+        
+    }
+    return result;   
+}
+
+std::queue<int> interLeave(std::queue<int> q){
+    std::queue<int> q1, q2;
+    int n = q.size();
+    for(int i = 0; i<(n/2); i++){
+        q1.push(q.front());
+        q.pop();
+    }
+    for(int i = 0; i<(n/2); i++){
+        q2.push(q.front());
+        q.pop();
+    }
+    for(int i = 0; i<(n/2); i++){
+        q.push(q1.front());
+        q1.pop();
+        q.push(q2.front());
+        q2.pop();
+    }
+    return q;   
+}
+
+
 int main(int argc, char** argv){
     // Queue *greet = new Queue();
     // std::cout << greet->getQueueMessage() << std::endl;
